@@ -42,6 +42,21 @@
           {{ site.time | date: '%Y' }}
           {% if site.url-pretty %}
             &nbsp;&bull;&nbsp;
+<p class="copyright text-muted">
+          {% if site.author %}{{ site.author }} &nbsp;&bull;&nbsp; {% endif %}
+          {{ site.time | date: '%Y' }}
+          {% if site.url-pretty %}
+            &nbsp;&bull;&nbsp;
+            <span class="author-site">
+              <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+            </span>
+          {% endif %}
+        </p>
+        
+        <p class="text-muted" style="font-size: 0.9em;">
+          Made by Sailesh Mucheli, Designed by Riddhim Inamke
+        </p>
+          
             <span class="author-site">
               <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
             </span>
