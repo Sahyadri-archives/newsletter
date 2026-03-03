@@ -285,19 +285,23 @@ subtitle: Click on thumbnail to open the album
             });
 
             // 3. Toggle visibility on click
-            btn.addEventListener('click', function() {
-                const hiddenItems = document.querySelectorAll('.hidden-item');
-                
-                hiddenItems.forEach((item, index) => {
-                    // Reveal the next batch (or all of them)
-                    if (index < itemsPerPage) {
-                        item.classList.remove('hidden-item');
-                    }
-                });
+// Replace the toggle logic in the previous script with this:
+btn.addEventListener('click', function() {
+    let revealedCount = 0;
+    const hiddenItems = document.querySelectorAll('.hidden-item');
+    
+    hiddenItems.forEach((item) => {
+        if (revealedCount < itemsPerPage) {
+            item.classList.remove('hidden-item');
+            item.style.display = 'block'; // Or 'flex' if the item itself needs to be flex
+            revealedCount++;
+        }
+    });
 
-                // Hide button if no more items are left
-                if (document.querySelectorAll('.hidden-item').length === 0) {
-                    btn.style.display = 'none';
+    if (document.querySelectorAll('.hidden-item').length === 0) {
+        btn.style.display = 'none';
+    }
+});
                 }
             });
         });
