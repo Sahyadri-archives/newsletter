@@ -25,8 +25,11 @@
         <a href="mailto:office@sahyadrischool.org">office@sahyadrischool.org</a></p>
       </div>
     </div>
-    <hr> <div class="row">
-      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+    <hr>
+
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center">
         {% include social-networks-links.html %}
         
         {% if page.footer-extra %}
@@ -42,26 +45,16 @@
           {{ site.time | date: '%Y' }}
           {% if site.url-pretty %}
             &nbsp;&bull;&nbsp;
-<p class="copyright text-muted">
-          {% if site.author %}{{ site.author }} &nbsp;&bull;&nbsp; {% endif %}
-          {{ site.time | date: '%Y' }}
-          {% if site.url-pretty %}
-            &nbsp;&bull;&nbsp;
             <span class="author-site">
               <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
             </span>
           {% endif %}
         </p>
-        
-        <p class="text-muted" style="font-size: 0.9em;">
+
+        <p class="text-muted" style="font-size: 0.9em; margin-top: -10px;">
           Made by Sailesh Mucheli, Designed by Riddhim Inamke
         </p>
-          
-            <span class="author-site">
-              <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
-            </span>
-          {% endif %}
-        </p>
+        
       </div>
     </div>
   </div>
