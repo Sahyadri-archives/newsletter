@@ -161,6 +161,24 @@ body, p, div {
     }
 }
 
+.btn-load-more {
+            padding: 10px 25px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn-load-more:hover {
+            background-color: #555;
+        }
+        /* Hidden class for items */
+        .hidden-item {
+            display: none;
+        }
+
 
 .video-grid {
     display: flex;
