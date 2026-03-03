@@ -265,45 +265,47 @@ subtitle: Click on thumbnail to open the album
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const itemsPerPage = 20;
-            const items = document.querySelectorAll('.album-item');
-            const btn = document.getElementById('load-more-btn');
-            
-            // 1. Reverse the items in the DOM automatically 
-            // (Optional if you manually reorder the HTML above)
-            const container = document.getElementById('album-container');
-            const itemsArray = Array.from(items);
-            itemsArray.reverse().forEach(item => container.appendChild(item));
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Configuration
+    const itemsPerPage = 20;
+    const btn = document.getElementById('load-more-btn');
+    const allItems = Array.from(document.querySelectorAll('.album-item'));
+    const totalItems = allItems.length;
 
-            // 2. Hide items beyond the first 20
-            const updatedItems = document.querySelectorAll('.album-item');
-            updatedItems.forEach((item, index) => {
-                if (index >= itemsPerPage) {
-                    item.classList.add('hidden-item');
-                }
+    // 2. Initial State: Hide the oldest albums
+    // Because your CSS uses row-reverse, the items at the end of your HTML 
+    // are the ones that appear at the top of the page.
+    if (totalItems <= itemsPerPage) {
+        if (btn) btn.parentElement.style.display = 'none';
+    } else {
+        // We hide items from the beginning of the list (index 0) 
+        // up to the point where only 20 items remain at the end.
+        for (let i = 0; i < totalItems - itemsPerPage; i++) {
+            allItems[i].classList.add('hidden-item');
+        }
+    }
+
+    // 3. Click Event: Reveal previous albums
+    if (btn) {
+        btn.addEventListener('click', function() {
+            // Find all currently hidden items
+            const hiddenItems = Array.from(document.querySelectorAll('.hidden-item'));
+            
+            // We reveal the next batch of 20, working backwards 
+            // from the end of the hidden list towards the start.
+            const batchToReveal = hiddenItems.slice(-itemsPerPage);
+            
+            batchToReveal.forEach(item => {
+                item.classList.remove('hidden-item');
             });
 
-            // 3. Toggle visibility on click
-// Replace the toggle logic in the previous script with this:
-btn.addEventListener('click', function() {
-    let revealedCount = 0;
-    const hiddenItems = document.querySelectorAll('.hidden-item');
-    
-    hiddenItems.forEach((item) => {
-        if (revealedCount < itemsPerPage) {
-            item.classList.remove('hidden-item');
-            item.style.display = 'block'; // Or 'flex' if the item itself needs to be flex
-            revealedCount++;
-        }
-    });
-
-    if (document.querySelectorAll('.hidden-item').length === 0) {
-        btn.style.display = 'none';
+            // 4. Clean up: Hide button if everything is shown
+            const remainingHidden = document.querySelectorAll('.hidden-item').length;
+            if (remainingHidden === 0) {
+                btn.parentElement.style.display = 'none';
+            }
+        });
     }
 });
-                }
-            });
-        });
-    </script>
+</script>
 </body>
