@@ -259,4 +259,47 @@ subtitle: Click on thumbnail to open the album
         </figure>
 
     </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <button id="load-more-btn" class="btn-load-more">Load More</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const itemsPerPage = 20;
+            const items = document.querySelectorAll('.album-item');
+            const btn = document.getElementById('load-more-btn');
+            
+            // 1. Reverse the items in the DOM automatically 
+            // (Optional if you manually reorder the HTML above)
+            const container = document.getElementById('album-container');
+            const itemsArray = Array.from(items);
+            itemsArray.reverse().forEach(item => container.appendChild(item));
+
+            // 2. Hide items beyond the first 20
+            const updatedItems = document.querySelectorAll('.album-item');
+            updatedItems.forEach((item, index) => {
+                if (index >= itemsPerPage) {
+                    item.classList.add('hidden-item');
+                }
+            });
+
+            // 3. Toggle visibility on click
+            btn.addEventListener('click', function() {
+                const hiddenItems = document.querySelectorAll('.hidden-item');
+                
+                hiddenItems.forEach((item, index) => {
+                    // Reveal the next batch (or all of them)
+                    if (index < itemsPerPage) {
+                        item.classList.remove('hidden-item');
+                    }
+                });
+
+                // Hide button if no more items are left
+                if (document.querySelectorAll('.hidden-item').length === 0) {
+                    btn.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
