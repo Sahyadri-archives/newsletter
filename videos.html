@@ -146,27 +146,30 @@ subtitle: Click on the thumbnail to view
 </div>
 
 <script>
-    let currentItems = 0;
-    const itemsPerLoad = 10;
     const items = document.querySelectorAll('.video-item');
+let currentItems = 0;
+const itemsPerLoad = 10;
 
-    function showMoreItems() {
-        let max = currentItems + itemsPerLoad;
-        
-        for (let i = currentItems; i < max && i < items.length; i++) {
-            items[i].style.display = 'block';
-        }
+// FIX: Hide all items initially before showing the first batch
+items.forEach(item => item.classList.add('hidden-item'));
 
-        currentItems = max;
-
-        // Hide button if no more items are left
-        if (currentItems >= items.length) {
-            document.getElementById('loadMoreBtn').style.display = 'none';
-        }
+function showMoreItems() {
+    let max = currentItems + itemsPerLoad;
+    
+    for (let i = currentItems; i < max && i < items.length; i++) {
+        // Remove the hidden class to reveal the item
+        items[i].classList.remove('hidden-item');
     }
 
-    // Initial load
-    showMoreItems();
+    currentItems = max;
+
+    if (currentItems >= items.length) {
+        document.getElementById('loadMoreBtn').style.display = 'none';
+    }
+}
+
+// Run the initial load to show the first 10
+showMoreItems();
 
     // YouTube Load Logic
     function loadVideo(container) {
