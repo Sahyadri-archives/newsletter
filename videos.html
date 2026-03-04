@@ -146,30 +146,48 @@ subtitle: Click on the thumbnail to view
 </div>
 
 <script>
-    const items = document.querySelectorAll('.video-item');
-let currentItems = 0;
-const itemsPerLoad = 10;
+    document.addEventListener("DOMContentLoaded", function() {
+    // 1. Configuration
+    const itemsPerPage = 10;
+    const btn = document.getElementById('load-more-btn');
+    const allItems = Array.from(document.querySelectorAll('.video-item'));
+    const totalItems = allItems.length;
 
-// FIX: Hide all items initially before showing the first batch
-items.forEach(item => item.classList.add('hidden-item'));
-
-function showMoreItems() {
-    let max = currentItems + itemsPerLoad;
-    
-    for (let i = currentItems; i < max && i < items.length; i++) {
-        // Remove the hidden class to reveal the item
-        items[i].classList.remove('hidden-item');
+    // 2. Initial State: Hide the oldest albums
+    // Because your CSS uses row-reverse, the items at the end of your HTML 
+    // are the ones that appear at the top of the page.
+    if (totalItems <= itemsPerPage) {
+        if (btn) btn.parentElement.style.display = 'none';
+    } else {
+        // We hide items from the beginning of the list (index 0) 
+        // up to the point where only 20 items remain at the end.
+        for (let i = 0; i < totalItems - itemsPerPage; i++) {
+            allItems[i].classList.add('hidden-item');
+        }
     }
 
-    currentItems = max;
+    // 3. Click Event: Reveal previous albums
+    if (btn) {
+        btn.addEventListener('click', function() {
+            // Find all currently hidden items
+            const hiddenItems = Array.from(document.querySelectorAll('.hidden-item'));
+            
+            // We reveal the next batch of 20, working backwards 
+            // from the end of the hidden list towards the start.
+            const batchToReveal = hiddenItems.slice(-itemsPerPage);
+            
+            batchToReveal.forEach(item => {
+                item.classList.remove('hidden-item');
+            });
 
-    if (currentItems >= items.length) {
-        document.getElementById('loadMoreBtn').style.display = 'none';
+            // 4. Clean up: Hide button if everything is shown
+            const remainingHidden = document.querySelectorAll('.hidden-item').length;
+            if (remainingHidden === 0) {
+                btn.parentElement.style.display = 'none';
+            }
+        });
     }
-}
-
-// Run the initial load to show the first 10
-showMoreItems();
+});
 
     // YouTube Load Logic
     function loadVideo(container) {
