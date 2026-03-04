@@ -10,7 +10,8 @@ author: Sahyadri
 ###############################################
 
 navbar-links:
-  Digital Safety: "digisafe"
+  Workshop: 
+      - Digital Safety: "digisafe"
   Krishnamurthi:
     - Monsoon Term 2025-26: "mon25"
     - Spring Term 2025-26: "spr25"
