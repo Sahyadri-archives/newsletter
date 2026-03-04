@@ -503,5 +503,5 @@ html {
 
 ::selection {
     background-color: #FFFFFF; /* Example: a yellow highlight background */
-    color: #000000;            /* This forces the text to be black */
+    color: #0000EE;            /* This forces the text to be black */
 }
