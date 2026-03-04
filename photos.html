@@ -1,213 +1,311 @@
 ---
 layout: page
-title: Videos
-subtitle: Click on the thumbnail to view
+title: Photos
+subtitle: Click on thumbnail to open the album
 ---
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Gallery</title>
     <link rel="stylesheet" href="custom-styles.css">
-    <style>
-        /* Hidden state for items not yet "loaded" */
-        .video-item {
-            display: none;
-        }
-        
-        /* Load More Button Styling */
-        .load-more-container {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .load-more-btn {
-            padding: 10px 25px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-
-        .load-more-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
+
 <body>
+    <div class="album-grid">
 
-<div class="video-grid" id="videoGrid">
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="-bvpjpW-FOo">
-            <img src="https://img.youtube.com/vi/-bvpjpW-FOo/maxresdefault.jpg" class="thumbnail" alt="Hindi Play Thumbnail">
-        </div>
-        <figcaption>Hindi Play, 15th Mar 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/ESnz8wG8Lbm8x1qw5" target="_blank">
+                <img src="assets/img/Photos/environment.jpg" alt="Environment Day">
+            </a>
+            <figcaption>Environment Day, 12th - 13th June 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="xgelWzEUYPA">
-            <img src="https://img.youtube.com/vi/xgelWzEUYPA/maxresdefault.jpg" class="thumbnail" alt="Assembly Thumbnail">
-        </div>
-        <figcaption>Assembly, 21st Mar 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/RYUUcB9gw6FD3XEK8" target="_blank">
+                <img src="assets/img/Photos/book-fest.jpg" alt="Book Festival">
+            </a>
+            <figcaption>Book Festival, 16th - 19th June 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="6rLuDnX8FDA">
-            <img src="https://img.youtube.com/vi/6rLuDnX8FDA/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Miya Tansen, 28th June 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/6Yko8iC9rHzwZH6q9" target="_blank">
+                <img src="assets/img/Photos/tansen-play.jpg" alt="Tansen Play">
+            </a>
+            <figcaption>Tansen Play, 28th June 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="2ZmZCpq9y0M">
-            <img src="https://img.youtube.com/vi/2ZmZCpq9y0M/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Freshers Eve, 12th July 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/pGjGYDcSqCQ3YMtf9" target="_blank">
+                <img src="assets/img/Photos/freshers-hike.jpg" alt="Freshers Hikes">
+            </a>
+            <figcaption>Freshers Hikes, 29th June 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="AY7zaDn7RCo">
-            <img src="https://img.youtube.com/vi/AY7zaDn7RCo/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Class 11 Play, 26th July 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/4fRzVAUo91mMGa22A" target="_blank">
+                <img src="assets/img/Photos/dorm-hike.jpg" alt="Dorm Hikes">
+            </a>
+            <figcaption>Dorm Hikes, 6th July 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="2a8wG0gDRV8">
-            <img src="https://img.youtube.com/vi/2a8wG0gDRV8/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Marathi Music Assembly by Classes 5 & 6, 5th August 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/FAdcmM2EiDJKWkuN9" target="_blank">
+                <img src="assets/img/Photos/freshers-eve.jpg" alt="Freshers Eve">
+            </a>
+            <figcaption>Freshers Eve, 12th July 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="HD3EPAhiQV0">
-            <img src="https://img.youtube.com/vi/HD3EPAhiQV0/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Cultural Event - Jaltarang by Pt Milind, 9th August 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/LDTpzvieTjLrdBePA" target="_blank">
+                <img src="assets/img/Photos/11th-play.jpg" alt="Class 11 Play">
+            </a>
+            <figcaption>Class 11 Play, 26th July 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="ygj32W4sj2E">
-            <img src="https://img.youtube.com/vi/ygj32W4sj2E/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Bharatanatyam and Kathak Dance Performance, 13th August 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/R47DSbRJFRMW6Smp7" target="_blank">
+                <img src="assets/img/Photos/eng-lit.jpg" alt="English Literature Assembly">
+            </a>
+            <figcaption>English Literature Assembly, 26th July 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="usXoO01skhs">
-            <img src="https://img.youtube.com/vi/usXoO01skhs/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Performing Art - Tabla, 21st August 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/ZyAb9GaoMawP7nAV6" target="_blank">
+                <img src="assets/img/Photos/Marathi-class4.jpg" alt="Marathi Assembly">
+            </a>
+            <figcaption>Marathi Assembly, 31st July 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="cn3509apTVI">
-            <img src="https://img.youtube.com/vi/cn3509apTVI/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Sitar Performance by Class 12, 23rd August 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/7Ky62kou2pkiaNuB6" target="_blank">
+                <img src="assets/img/Photos/Open-house.jpg" alt="Open House">
+            </a>
+            <figcaption>Open House, 2nd August 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="i1QVFCgJXNs">
-            <img src="https://img.youtube.com/vi/i1QVFCgJXNs/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Class 10 Play "O Captain, My Captain", 30th August 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/9fimQ9ofu192VKsX6" target="_blank">
+                <img src="assets/img/Photos/Friendship-day.JPG" alt="Friendship Day">
+            </a>
+            <figcaption>Friendship Day, 3rd August 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="__tZje9ac2s">
-            <img src="https://img.youtube.com/vi/__tZje9ac2s/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Music Assembly, 29th December 2025</figcaption>
-    </figure>
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/Zf19een2dJYSEU2G6" target="_blank">
+                <img src="assets/img/Photos/Marathi-folk.jpg" alt="Marathi Folk Assembly">
+            </a>
+            <figcaption>Marathi Folk Assembly, 5th August 2025</figcaption>
+        </figure>
 
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="mHJ_fxARq4M">
-            <img src="https://img.youtube.com/vi/mHJ_fxARq4M/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Marathi Play by Class 4, 2nd January 2026</figcaption>
-    </figure>
-
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="CnecjkzddkQ">
-            <img src="https://img.youtube.com/vi/CnecjkzddkQ/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Sitar Performance by Class 9, 9th January 2026</figcaption>
-    </figure>
-
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="Obl5Lb9q7XQ">
-            <img src="https://img.youtube.com/vi/Obl5Lb9q7XQ/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Makar Sankranti Assembly by Class 7, 14th January 2026</figcaption>
-    </figure>
-
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="eU4VrkcdSvs">
-            <img src="https://img.youtube.com/vi/eU4VrkcdSvs/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Bharatnatyam Performance, 24th January 2026</figcaption>
-    </figure>
-
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="SpNSMveVNds">
-            <img src="https://img.youtube.com/vi/SpNSMveVNds/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Sitar Performance by Class 10, 24th January 2026</figcaption>
-    </figure>
-
-    <figure class="video-item">
-        <div class="video-wrapper" onclick="loadVideo(this)" data-video="B_DAFuXGtTU">
-            <img src="https://img.youtube.com/vi/B_DAFuXGtTU/maxresdefault.jpg" class="thumbnail" alt="Play Thumbnail">
-        </div>
-        <figcaption>Marathi Play by Class 6, 29th January 2026</figcaption>
-    </figure>
-</div>
-
-<div class="load-more-container">
-    <button id="loadMoreBtn" class="load-more-btn" onclick="showMoreItems()">Load More</button>
-</div>
-
-<script>
-    let currentItems = 0;
-    const itemsPerLoad = 10;
-    const items = document.querySelectorAll('.video-item');
-
-    function showMoreItems() {
-        let max = currentItems + itemsPerLoad;
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/UuzNhJ5ozZnBNtkaA" target="_blank">
+                <img src="assets/img/Photos/jaltarang.jpg" alt="Jaltarang Performance">
+            </a>
+            <figcaption>Jaltarang Performance, 9th August 2025</figcaption>
+        </figure>
         
-        for (let i = currentItems; i < max && i < items.length; i++) {
-            items[i].style.display = 'block';
-        }
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/aPPp2vU2Bq3W7D8n6" target="_blank">
+                <img src="assets/img/Photos/Classical-dance.JPG" alt="Classical Dance">
+            </a>
+            <figcaption>Classical Dance by Grade 10, 13th August 2025</figcaption>
+        </figure>
 
-        currentItems = max;
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/qTY9YaWSbbtSQ53X8" target="_blank">
+                <img src="assets/img/Photos/football-tournament.JPG" alt="Football Tournament">
+            </a>
+            <figcaption>Football Tournament, 4th - 14th August 2025</figcaption>
+        </figure>
+        
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/KkaGCTUMH7G91h5U8" target="_blank">
+                <img src="assets/img/Photos/Independence.jpg" alt="Independence Day">
+            </a>
+            <figcaption>Independence Day, 15th August 2025</figcaption>
+        </figure>
 
-        // Hide button if no more items are left
-        if (currentItems >= items.length) {
-            document.getElementById('loadMoreBtn').style.display = 'none';
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/7mP9Gj1Vo1hL5wQj6" target="_blank">
+                <img src="assets/img/Photos/12th-sitar.jpg" alt="Class 12 Sitar Performance">
+            </a>
+            <figcaption>Sitar Performance by Grade 12, 23rd August 2025</figcaption>
+        </figure>
+
+         <figure class="album-item">
+            <a href="https://photos.app.goo.gl/rHX7XvHLkTFT7DpU9" target="_blank">
+                <img src="assets/img/Photos/Class10-play.jpg" alt="Class 10 Play">
+            </a>
+            <figcaption>Class 10 Play, 30th August 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/9jKRdrguZ2XUfqw98" target="_blank">
+                <img src="assets/img/Photos/art-lit.JPG" alt="Art-Lit Fest">
+            </a>
+            <figcaption>Art-Lit Fest, 15th August - 2nd September 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/jG9yNydYFc53kjtn7" target="_blank">
+                <img src="assets/img/Photos/Shambhu-clean.jpg" alt="Shambhu Hill Cleanup">
+            </a>
+            <figcaption>Shambhu Hill Cleanup, 7th September 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/idmaJcExwsYfCMHC7" target="_blank">
+                <img src="assets/img/Photos/mohiniyattam.jpg" alt="Mohiniyattam Performance">
+            </a>
+            <figcaption>Mohiniyattam Performance, 10th September 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/gx5hmiHaqb8cW7Jc7" target="_blank">
+                <img src="assets/img/Photos/football-interschool.jpg" alt="Football Interschool">
+            </a>
+            <figcaption>Football Interschool, 21st September 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/J6cd9JquxsreVfFXA" target="_blank">
+                <img src="assets/img/Photos/Dasara.jpg" alt="Dasara Celebration">
+            </a>
+            <figcaption>Dasara Celebration, 30th September 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/8kw6udpDfTUadsTy7" target="_blank">
+                <img src="assets/img/Photos/Musical-eve25.jpg" alt="Musical Eve">
+            </a>
+            <figcaption>Musical Eve, 4th October 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/tM94xk7S3ueJtgAQA" target="_blank">
+                <img src="assets/img/Photos/11-excursion.jpg" alt="Class 11 Excursion">
+            </a>
+            <figcaption>Class 11 Excursion, 6th - 16th October 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/mvTzcAxGXeFKbpQe7" target="_blank">
+                <img src="assets/img/Photos/class-hikes.jpg" alt="Class Hikes">
+            </a>
+            <figcaption>Class Hikes, 29th November 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/Wj8dzXwmCLQsmbxo6" target="_blank">
+                <img src="assets/img/Photos/Vocals.jpg" alt="Vocals Assembly">
+            </a>
+            <figcaption>Vocals Assembly, 6th December 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/1PjCH7Edh2fRZyrp6" target="_blank">
+                <img src="assets/img/Photos/Sports-fest.JPG" alt="Sports Fest">
+            </a>
+            <figcaption>Sports Fest, 18th - 20th December 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/bwGBKG8qj5xrKZ9V7" target="_blank">
+                <img src="assets/img/Photos/Alumni.JPG" alt="Alumni Meet">
+            </a>
+            <figcaption>Alumni Meet, 22nd December 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/rxQrY2RppHsWNvfx7" target="_blank">
+                <img src="assets/img/Photos/Chrismas.JPG" alt="Christmas Eve">
+            </a>
+            <figcaption>Christmas Eve, 24th December 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/wvkeU313o8RfR5ep9" target="_blank">
+                <img src="assets/img/Photos/Cross-country.jpg" alt="Cross Country">
+            </a>
+            <figcaption>Cross Country, 28th December 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/ZidC6WX7wPkuEpzs5" target="_blank">
+                <img src="assets/img/Photos/New-Year.JPG" alt="New Year's Eve">
+            </a>
+            <figcaption>New Year's Eve, 31st December 2025</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/aDzyTzR9bmJAMWXQ6" target="_blank">
+                <img src="assets/img/Photos/Rock-climbing.jpg" alt="Rock Climbing">
+            </a>
+            <figcaption>Rock Climbing, 3rd January 2026</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.app.goo.gl/WNwER6eE7QyhuiLk9" target="_blank">
+                <img src="assets/img/Photos/Farewell.JPG" alt="Farewell">
+            </a>
+            <figcaption>Farewell, 10th January 2026</figcaption>
+        </figure>
+
+        <figure class="album-item">
+            <a href="https://photos.google.com/share/AF1QipOlp2t6fIl1VihLT_7qzuTTTgrrtoyEfuN2PBIgHpyqFEOuoRWEHAyBRCs-IgZLYQ?pli=1&key=UHVkTnBtTVYtSjJDRVdvMERQcDJmOTNVOFF0LVF3" target="_blank">
+                <img src="assets/img/Photos/Republic.JPG" alt="Republic Day">
+            </a>
+            <figcaption>Republic Day, 26th January 2026</figcaption>
+        </figure>
+
+    </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <button id="load-more-btn" class="btn-load-more">Load More</button>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Configuration
+    const itemsPerPage = 10;
+    const btn = document.getElementById('load-more-btn');
+    const allItems = Array.from(document.querySelectorAll('.album-item'));
+    const totalItems = allItems.length;
+
+    // 2. Initial State: Hide the oldest albums
+    // Because your CSS uses row-reverse, the items at the end of your HTML 
+    // are the ones that appear at the top of the page.
+    if (totalItems <= itemsPerPage) {
+        if (btn) btn.parentElement.style.display = 'none';
+    } else {
+        // We hide items from the beginning of the list (index 0) 
+        // up to the point where only 20 items remain at the end.
+        for (let i = 0; i < totalItems - itemsPerPage; i++) {
+            allItems[i].classList.add('hidden-item');
         }
     }
 
-    // Initial load
-    showMoreItems();
+    // 3. Click Event: Reveal previous albums
+    if (btn) {
+        btn.addEventListener('click', function() {
+            // Find all currently hidden items
+            const hiddenItems = Array.from(document.querySelectorAll('.hidden-item'));
+            
+            // We reveal the next batch of 20, working backwards 
+            // from the end of the hidden list towards the start.
+            const batchToReveal = hiddenItems.slice(-itemsPerPage);
+            
+            batchToReveal.forEach(item => {
+                item.classList.remove('hidden-item');
+            });
 
-    // YouTube Load Logic
-    function loadVideo(container) {
-        const videoId = container.getAttribute('data-video');
-        const iframe = document.createElement('iframe');
-        iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
-        iframe.setAttribute('frameborder', '0');
-        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-        iframe.setAttribute('allowfullscreen', 'true');
-        
-        container.innerHTML = '';
-        container.appendChild(iframe);
+            // 4. Clean up: Hide button if everything is shown
+            const remainingHidden = document.querySelectorAll('.hidden-item').length;
+            if (remainingHidden === 0) {
+                btn.parentElement.style.display = 'none';
+            }
+        });
     }
+});
 </script>
-
 </body>
-</html>
