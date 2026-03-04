@@ -13,7 +13,7 @@ subtitle: Click on the thumbnail to view
 </head>
 <body>
 
-<div class="video-grid">
+<div class="video-grid" id="videoGrid">
     <figure class="video-item">
         <div class="video-wrapper" onclick="loadVideo(this)" data-video="-bvpjpW-FOo">
             <img src="https://img.youtube.com/vi/-bvpjpW-FOo/maxresdefault.jpg" class="thumbnail" alt="Hindi Play Thumbnail">
@@ -139,40 +139,48 @@ subtitle: Click on the thumbnail to view
         </div>
         <figcaption>Marathi Play by Class 6, 29th January 2026</figcaption>
     </figure>
-    
 </div>
 
-    
- <script>
+<div class="load-more-container">
+    <button id="loadMoreBtn" class="load-more-btn" onclick="showMoreItems()">Load More</button>
+</div>
 
-    function loadVideo(container) {
+<script>
+    let currentItems = 0;
+    const itemsPerLoad = 10;
+    const items = document.querySelectorAll('.video-item');
 
-        const videoId = container.getAttribute('data-video');
-
-        // autoplay=1 starts the video immediately after the click
-
-        // rel=0 prevents showing related videos from other channels
-
-        const iframe = document.createElement('iframe');
-
-        iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
-
-        iframe.setAttribute('frameborder', '0');
-
-        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-
-        iframe.setAttribute('allowfullscreen', 'true'); // Enables the fullscreen button
-
+    function showMoreItems() {
+        let max = currentItems + itemsPerLoad;
         
+        for (let i = currentItems; i < max && i < items.length; i++) {
+            items[i].style.display = 'block';
+        }
 
-        // Replace thumbnail and play button with the player
+        currentItems = max;
 
-        container.innerHTML = '';
-
-        container.appendChild(iframe);
-
+        // Hide button if no more items are left
+        if (currentItems >= items.length) {
+            document.getElementById('loadMoreBtn').style.display = 'none';
+        }
     }
 
-    </script>
+    // Initial load
+    showMoreItems();
+
+    // YouTube Load Logic
+    function loadVideo(container) {
+        const videoId = container.getAttribute('data-video');
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', 'true');
+        
+        container.innerHTML = '';
+        container.appendChild(iframe);
+    }
+</script>
+
 </body>
 </html>
