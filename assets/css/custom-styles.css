@@ -62,7 +62,7 @@ h3 {
     font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
-.post-subtitle {
+.post-subtitle, .post-subheading {
     font-family: 'Vibes' !important;
     font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
 }
@@ -92,7 +92,7 @@ body, p, div {
 
 /* Example of what to add to your CSS file */
 .post-heading {
-    margin-top: 100px; 
+    margin-top: 120px; 
 }
 
 .navbar .nav-link {
