@@ -1,19 +1,32 @@
+/* --- 1. FONTS & IMPORTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Julia+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vibes&display=swap');
 
-/* 1. Reset the Bootstrap columns to be full-width of their parent */
+/* --- 2. LAYOUT & CONTAINERS --- */
+html {
+    scroll-behavior: smooth;
+}
 
-main .col-xl-8, 
+main.container-md,
+.container-md,
+.container-lg,
+.beautiful-jekyll-footer,
+.intro-header .container-md {
+    max-width: 90% !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+main .col-xl-8,
 main .col-lg-10 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     margin-left: 0 !important;
 }
 
-/* Target only the container inside the header */
-.intro-header .container-md, 
-.intro-header .container-lg, 
+.intro-header .container-md,
+.intro-header .container-lg,
 .intro-header .container {
     max-width: 1200px !important;
     width: 100% !important;
@@ -21,12 +34,14 @@ main .col-lg-10 {
     margin-left: auto;
     margin-right: auto;
 }
-/* Reduce the width of the main body content only */
-main.container-md {
-    max-width: 65% !important; /* Change this % to make it narrower */
-    width: 65% !important;
-    margin: 0 auto !important; /* Keeps the narrow body centered */
+
+/* --- 3. TYPOGRAPHY --- */
+body, p, div {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: clamp(1rem, 0.5rem + 0.68vw, 2.5rem);
 }
+
 h1 {
     font-size: clamp(2.5rem, 2.5rem + 2.73vw, 8rem) !important;
     margin-bottom: 20px !important;
@@ -37,10 +52,17 @@ h2 {
     margin-bottom: 15px !important;
 }
 
-h1, h2, .term-title {
-  font-family: 'Amatic SC', sans-serif !important;
-  font-weight: bold !important;
-  text-transform: uppercase !important;
+h1, h2, .term-title, .category-heading {
+    font-family: 'Amatic SC', sans-serif !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    color: #404040;
+}
+
+h3 {
+    font-family: 'Vibes', cursive !important;
+    font-weight: bold !important;
+    font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
 }
 
 .term-title {
@@ -51,218 +73,103 @@ h1, h2, .term-title {
     font-size: clamp(0.75rem, 0.5rem + 0.6vw, 2rem) !important;
 }
 
-h3 {
+.post-meta, .post-subtitle {
     font-family: 'Vibes', cursive !important;
     font-weight: bold !important;
-    font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
 }
+
 .post-meta {
-    font-family: 'Vibes', cursive !important;
-    font-weight: bold !important;
     font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
 .post-subtitle {
-    font-family: 'Vibes' !important;
     font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
 }
 
 .post-title {
-    font-family: 'Vibes' !important;
+    font-family: 'Vibes', cursive !important;
     text-transform: uppercase;
 }
 
-
-/* Apply it to the whole body or specific elements */
-body, p, div {
-    font-family: 'Montserrat' !important;
-    font-weight: 300 !important;
-    font-size: clamp(1rem, 0.5rem + 0.68vw, 2.5rem);
-}
-
-/* Specifically for the Category/Post Meta as you asked earlier */
-.blog-tags, .post-categories, .blog-tags, .page-subheading {
-    font-family: 'Amatic SC' !important;
+.blog-tags, .post-categories, .page-subheading {
+    font-family: 'Amatic SC', sans-serif !important;
     font-weight: bold;
     font-size: 1.25rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
+
+/* --- 4. NAVIGATION --- */
 .navbar .nav-link {
     font-family: 'Vibes', cursive !important;
     font-size: 0.85rem;
-    font-transform: uppercase ;
-    font-colour: "#E8F3DF" !important;
-    font-hover: "#FFFFFF" !important;
+    text-transform: uppercase;
+    color: #E8F3DF !important;
 }
 
-.navabar-brand {
-    font-family: 'Amatic SC', sans serif !important;
-    font-colour: "#E8F3DF" !important;
-    font-hover: "#FFFFFF" !important;
+.navbar .nav-link:hover {
+    color: #FFFFFF !important;
 }
 
-.copyright text-muted {
-    font-family: 'Vibes', cursive !important;
-    text-transform: uppercase !important;
-}
-
-/* --- Updated Album Grid (Matches Video Grid) --- */
-.album-grid {
-    display: flex;
-    flex-direction: row-reverse; 
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-    gap: 40px; /* Increased from 30px to match video-grid gap */
-    max-width: 1200px; /* Increased from 1000px to match video-grid */
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-/* --- Individual Album Container --- */
-.album-item {
-    /* Matches video-item: 50% width minus half the gap */
-    flex: 0 1 calc(50% - 20px); 
-    margin: 0;
-    text-align: center;
-}
-
-/* --- Thumbnail Images (Styled like Video Wrapper) --- */
-.album-item img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; 
-    object-fit: cover;
-    border-radius: 12px; /* Increased from 8px to match .video-wrapper */
-    /* Updated shadow to match the heavier .video-wrapper shadow */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Simple hover effect */
-.album-item a:hover img {
-    transform: scale(1.03);
-}
-
-/* --- Captions --- */
-.album-item figcaption {
-    margin-top: 15px;
-    font-family: sans-serif; /* Matches video-item figcaption */
-    font-weight: bold;       /* Matches video-item figcaption */
-    font-size: 18px;
-    color: #444;
-}
-
-/* --- Mobile Fix for Phones (Matches Video Grid) --- */
-@media (max-width: 768px) {
-    .album-item {
-        flex: 0 1 100%;
-    }
-}
-
-/* --- Customized Load More Button --- */
-
-.load-more-container {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.load-more-btn {
-    /* Typography matches your category headings and TOC links */
+.navbar-brand {
     font-family: 'Amatic SC', sans-serif !important;
-    font-weight: bold !important;
-    font-size: clamp(1.5rem, 1rem + 1vw, 2.5rem) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px;
-
-    /* Colors match your .toc-card style */
-    background-color: #BDCDC0 !important; 
-    color: #404040 !important;
-    
-    /* Layout & Border */
-    padding: 10px 40px;
-    border: 2px solid #404040;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    
-    /* Smooth transition for hover effects */
-    transition: all 0.3s ease;
-    display: inline-block;
+    color: #E8F3DF !important;
 }
 
-.load-more-btn:hover {
-    /* Inverts colors on hover to match TOC link behavior */
-    background-color: #404040 !important;
-    color: #ffffff !important;
-    transform: translateY(-3px); /* Subtle lift */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+.navbar-brand:hover {
+    color: #FFFFFF !important;
 }
 
-.load-more-btn:active {
-    transform: translateY(0);
-}
-
-/* Ensure hidden items are strictly hidden */
-.video-item.hidden-item {
-    display: none !important;
-}
-
-/* Base style for visible items */
-.video-item {
-    display: block; /* The grid handles the layout, but this allows toggle */
-    flex: 0 1 calc(50% - 20px);
-    margin: 0;
-}
-/* Hidden class for items */
-        .hidden-item {
-            display: none !important;
-        }
-
-
-.video-grid {
+/* --- 5. ALBUM & VIDEO GRIDS --- */
+.album-grid, .video-grid {
     display: flex;
-    flex-wrap: wrap-reverse; /* Your preferred reverse ordering */
+    flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
     justify-content: center;
     gap: 40px;
     max-width: 1200px;
     margin: 50px auto;
+    padding: 0 20px;
 }
 
-.video-item {
+.album-item, .video-item {
     flex: 0 1 calc(50% - 20px);
     margin: 0;
+    text-align: center;
 }
 
-/* The 16:9 Aspect Ratio Box */
+/* Image/Video Wrappers */
+.album-item img, .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
 .video-wrapper {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    padding-bottom: 56.25%;
     background-color: #000;
-    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Thumbnail and Iframe positioning */
-.video-wrapper img, 
-.video-wrapper iframe {
+.video-wrapper img, .video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
-/* The Play Button (Centered Circle) */
+.album-item a:hover img {
+    transform: scale(1.03);
+}
+
+/* Play Button */
 .play-button {
     position: absolute;
     top: 50%;
@@ -277,7 +184,6 @@ body, p, div {
     z-index: 2;
 }
 
-/* The Play Button Triangle */
 .play-button::after {
     content: "";
     position: absolute;
@@ -290,105 +196,30 @@ body, p, div {
 }
 
 .video-wrapper:hover .play-button {
-    background-color: #ff0000; /* YouTube Red on hover */
+    background-color: #ff0000;
     border-color: #ff0000;
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-.video-item figcaption {
+.album-item figcaption, .video-item figcaption {
     margin-top: 15px;
-    text-align: center;
     font-family: sans-serif;
     font-weight: bold;
+    font-size: 18px;
+    color: #444;
 }
 
-@media (max-width: 768px) {
-    .video-item { flex: 0 1 100%; }
-}
-
-.page-subheading {
-    font-weight: bold;
-}
-
-/* 1. Fluid Typography for Footer Headings (Mail Us, Call Us, etc.) */
-.beautiful-jekyll-footer h3 {
-    font-family: 'Vibes', cursive !important;
-    font-weight: bold !important;
-    /* Using your existing h3 clamp for consistency */
-    font-size: clamp(1.25rem, 0.65rem + 1.0vw, 3rem) !important;
-    margin-bottom: 1rem;
-}
-
-/* 2. Fluid Typography for Footer Body Text (Address, Phone numbers) */
-.beautiful-jekyll-footer p, 
-.beautiful-jekyll-footer div {
-    font-family: 'Montserrat' !important;
-    font-weight: 300 !important;
-    /* Using your existing body clamp */
-    font-size: clamp(0.75rem, 0.25rem + 0.5vw, 2rem) !important;
-    line-height: 1.5;
-}
-
-/* 3. Fluid Typography for Copyright Section */
-.copyright.text-muted {
-    font-family: 'Vibes', cursive !important;
-    text-transform: uppercase !important;
-    /* Slightly smaller fluid scale for the legal line */
-    font-size: clamp(0.7rem, 0.5rem + 0.5vw, 1.8rem) !important;
-    margin-top: 20px;
-}
-
-/* 4. Fluidity for the Footer Links (Email) */
-.beautiful-jekyll-footer a {
-    color: inherit;
-    text-decoration: underline;
-    transition: opacity 0.2s;
-}
-
-.beautiful-jekyll-footer a:hover {
-    opacity: 0.8;
-}
-
-/* 5. Ensure the footer container matches your main content width fluidity */
-.beautiful-jekyll-footer {
-    max-width: 65% !important; /* Matches your main.container-md */
-    width: 65% !important;
-    margin: 0 auto !important;
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-}
-
-/* Mobile Adjustment: Make footer wider on small screens */
-@media (max-width: 768px) {
-    .beautiful-jekyll-footer {
-        max-width: 90% !important;
-        width: 90% !important;
-    }
-}
-
-/* 1. LAYOUT EXPANSION: FORCE 90% WIDTH */
-main.container-md, 
-.container-md, 
-.container-lg,
-.beautiful-jekyll-footer,
-.intro-header .container-md {
-    max-width: 90% !important;
-    width: 90% !important;
-    margin: 0 auto !important;
-}
-
-/* --- 3. TABLE OF CONTENTS (STYLING) --- */
+/* --- 6. TABLE OF CONTENTS --- */
 .toc-card {
-    background-color: #BDCDC0 !important; /* Your requested color */
+    background-color: #BDCDC0 !important;
     padding: 25px;
     border-radius: 8px;
-    border: none;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .toc-title {
     margin-top: 0;
-    color: #404040 !important; /* Black text */
+    color: #404040 !important;
     border-bottom: 2px solid #000000;
     padding-bottom: 10px;
     font-size: clamp(1.8rem, 1.2rem + 1.5vw, 4rem) !important;
@@ -400,46 +231,84 @@ main.container-md,
     margin: 15px 0 0 0;
 }
 
-.toc-list li {
-    margin-bottom: 12px;
-}
-
 .toc-list a {
     font-family: 'Amatic SC', sans-serif !important;
     font-weight: bold !important;
     font-size: clamp(1.2rem, 0.8rem + 1vw, 2.8rem) !important;
-    color: #404040 !important; /* Black text */
+    color: #404040 !important;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
 }
 
 .toc-list a:hover {
-    color: #ffffff !important; /* Switches to white on hover for visibility */
+    color: #ffffff !important;
     transform: translateX(8px);
-}/* 3. POST IMAGES (LARGER & FLEXIBLE) */
-.post-entry-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
 }
 
-.post-image {
+/* --- 7. BUTTONS --- */
+.load-more-container {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
     width: 100%;
-    flex: 0 0 100%;
 }
 
-.post-image img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
+.load-more-btn {
+    font-family: 'Amatic SC', sans-serif !important;
+    font-weight: bold !important;
+    font-size: clamp(1.5rem, 1rem + 1vw, 2.5rem) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px;
+    background-color: #BDCDC0 !important;
+    color: #404040 !important;
+    padding: 10px 40px;
+    border: 2px solid #404040;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-/* 4. DESKTOP STICKY & PROPORTIONS */
+.load-more-btn:hover {
+    background-color: #404040 !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* --- 8. FOOTER --- */
+.beautiful-jekyll-footer h3 {
+    font-family: 'Vibes', cursive !important;
+    font-weight: bold !important;
+    font-size: clamp(1.25rem, 0.65rem + 1.0vw, 3rem) !important;
+}
+
+.beautiful-jekyll-footer p, .beautiful-jekyll-footer div {
+    font-family: 'Montserrat' !important;
+    font-weight: 300 !important;
+    font-size: clamp(0.75rem, 0.25rem + 0.5vw, 2rem) !important;
+    line-height: 1.5;
+}
+
+.copyright.text-muted {
+    font-family: 'Vibes', cursive !important;
+    text-transform: uppercase !important;
+    font-size: clamp(0.7rem, 0.5rem + 0.5vw, 1.8rem) !important;
+}
+
+/* --- 9. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .album-item, .video-item {
+        flex: 0 1 100%;
+    }
+    .beautiful-jekyll-footer {
+        max-width: 90% !important;
+        width: 90% !important;
+    }
+}
+
 @media (min-width: 992px) {
     .newsletter-container {
         display: flex;
@@ -447,7 +316,6 @@ main.container-md,
         justify-content: space-between;
         gap: 5%;
     }
-
     .toc-sidebar {
         flex: 0 0 20%;
         position: sticky;
@@ -455,42 +323,20 @@ main.container-md,
         max-height: calc(100vh - 80px);
         overflow-y: auto;
     }
-
     .posts-list {
         flex: 0 0 75%;
     }
-
-    .post-entry-container {
-        flex-direction: row;
-    }
-
-    .post-image {
-        flex: 0 0 40%;
-    }
 }
 
-/* 5. SMOOTH SCROLL & CATEGORY HEADINGS */
-html {
-    scroll-behavior: smooth;
+/* --- 10. VISIBILITY RULES (IMPORTANT) --- */
+/* Placing these last ensures they override the flex/display block rules above */
+.hidden-item {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
 }
-
-.category-heading {
-    font-family: 'Amatic SC', sans-serif !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    font-size: clamp(2rem, 1.5rem + 2.73vw, 8rem) !important;
-    border-bottom: 2px solid #735362;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    color: #404040;
-    scroll-margin-top: 80px;
-}
-
-.back-to-top a {
-    font-family: 'Vibes', cursive !important;
-    font-size: 1.5rem;
-    color: #735362;
-    text-decoration: none;
-}
-
-.video-caption a { color: #008aff; text-decoration: underline; }
