@@ -206,9 +206,16 @@ body, p, div {
     transform: translateY(0);
 }
 
-/* Ensure hidden items stay hidden regardless of other layout rules */
-.video-item[style*="display: none"] {
+/* Ensure hidden items are strictly hidden */
+.video-item.hidden-item {
     display: none !important;
+}
+
+/* Base style for visible items */
+.video-item {
+    display: block; /* The grid handles the layout, but this allows toggle */
+    flex: 0 1 calc(50% - 20px);
+    margin: 0;
 }
 /* Hidden class for items */
         .hidden-item {
