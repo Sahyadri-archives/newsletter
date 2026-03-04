@@ -25,31 +25,11 @@ main .col-lg-10 {
     margin-left: 0 !important;
 }
 
-.intro-header .container-md,
-.intro-header .container-lg,
-.intro-header .container {
-    max-width: 1200px !important;
-    width: 100% !important;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* --- 3. TYPOGRAPHY --- */
 body, p, div {
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 300 !important;
     font-size: clamp(1rem, 0.5rem + 0.68vw, 2.5rem);
-}
-
-h1 {
-    font-size: clamp(2.5rem, 2.5rem + 2.73vw, 8rem) !important;
-    margin-bottom: 20px !important;
-}
-
-h2 {
-    font-size: clamp(1rem, 0.75rem + 2.25vw, 4rem) !important;
-    margin-bottom: 15px !important;
 }
 
 h1, h2, .term-title, .category-heading {
@@ -59,55 +39,21 @@ h1, h2, .term-title, .category-heading {
     color: #404040;
 }
 
-h3 {
+h1 { font-size: clamp(2.5rem, 2.5rem + 2.73vw, 8rem) !important; }
+h2 { font-size: clamp(1rem, 0.75rem + 2.25vw, 4rem) !important; }
+
+h3, .post-title, .post-meta, .post-subtitle, .back-to-top a {
     font-family: 'Vibes', cursive !important;
-    font-weight: bold !important;
-    font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
-}
-
-.term-title {
-    font-size: clamp(2rem, 1.5rem + 2.73vw, 8rem) !important;
-}
-
-.post-entry {
-    font-size: clamp(0.75rem, 0.5rem + 0.6vw, 2rem) !important;
-}
-
-.post-meta, .post-subtitle {
-    font-family: 'Vibes', cursive !important;
-    font-weight: bold !important;
-}
-
-.post-meta {
-    font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
-}
-
-.post-subtitle {
-    font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
-}
-
-.post-title {
-    font-family: 'Vibes', cursive !important;
-    text-transform: uppercase;
-}
-
-.blog-tags, .post-categories, .page-subheading {
-    font-family: 'Amatic SC', sans-serif !important;
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 /* --- 4. NAVIGATION --- */
 .navbar .nav-link {
     font-family: 'Vibes', cursive !important;
-    font-size: 0.85rem;
-    text-transform: uppercase;
     color: #E8F3DF !important;
+    text-transform: uppercase;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover, .navbar-brand:hover {
     color: #FFFFFF !important;
 }
 
@@ -116,12 +62,8 @@ h3 {
     color: #E8F3DF !important;
 }
 
-.navbar-brand:hover {
-    color: #FFFFFF !important;
-}
-
-/* --- 5. ALBUM & VIDEO GRIDS --- */
-.album-grid, .video-grid {
+/* --- 5. VIDEO & ALBUM GRIDS --- */
+.video-grid, .album-grid {
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
@@ -129,47 +71,30 @@ h3 {
     gap: 40px;
     max-width: 1200px;
     margin: 50px auto;
-    padding: 0 20px;
 }
 
-.album-item, .video-item {
+.video-item, .album-item {
     flex: 0 1 calc(50% - 20px);
     margin: 0;
-    text-align: center;
+    display: block; /* Base state */
 }
 
-/* Image/Video Wrappers */
-.album-item img, .video-wrapper {
+.video-wrapper, .album-item img {
+    position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.video-wrapper {
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
     background-color: #000;
+    border-radius: 12px;
     overflow: hidden;
-    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
-.video-wrapper img, .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.album-item a:hover img {
+.video-wrapper:hover, .album-item img:hover {
     transform: scale(1.03);
 }
 
-/* Play Button */
+/* Play Button Styling */
 .play-button {
     position: absolute;
     top: 50%;
@@ -180,33 +105,12 @@ h3 {
     background-color: rgba(0, 0, 0, 0.7);
     border: 3px solid #fff;
     border-radius: 50%;
-    transition: all 0.3s ease;
     z-index: 2;
-}
-
-.play-button::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    border-style: solid;
-    border-width: 15px 0 15px 25px;
-    border-color: transparent transparent transparent #fff;
 }
 
 .video-wrapper:hover .play-button {
     background-color: #ff0000;
     border-color: #ff0000;
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-.album-item figcaption, .video-item figcaption {
-    margin-top: 15px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: #444;
 }
 
 /* --- 6. TABLE OF CONTENTS --- */
@@ -217,126 +121,36 @@ h3 {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.toc-title {
-    margin-top: 0;
-    color: #404040 !important;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 10px;
-    font-size: clamp(1.8rem, 1.2rem + 1.5vw, 4rem) !important;
-}
-
-.toc-list {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 0 0;
-}
-
 .toc-list a {
     font-family: 'Amatic SC', sans-serif !important;
     font-weight: bold !important;
-    font-size: clamp(1.2rem, 0.8rem + 1vw, 2.8rem) !important;
     color: #404040 !important;
     text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
 }
 
-.toc-list a:hover {
-    color: #ffffff !important;
-    transform: translateX(8px);
-}
-
-/* --- 7. BUTTONS --- */
-.load-more-container {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 20px;
-    width: 100%;
-}
-
+/* --- 7. LOAD MORE BUTTON --- */
 .load-more-btn {
     font-family: 'Amatic SC', sans-serif !important;
-    font-weight: bold !important;
-    font-size: clamp(1.5rem, 1rem + 1vw, 2.5rem) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px;
     background-color: #BDCDC0 !important;
     color: #404040 !important;
     padding: 10px 40px;
     border: 2px solid #404040;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
-    display: inline-block;
 }
 
 .load-more-btn:hover {
     background-color: #404040 !important;
     color: #ffffff !important;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* --- 8. FOOTER --- */
-.beautiful-jekyll-footer h3 {
-    font-family: 'Vibes', cursive !important;
-    font-weight: bold !important;
-    font-size: clamp(1.25rem, 0.65rem + 1.0vw, 3rem) !important;
-}
-
-.beautiful-jekyll-footer p, .beautiful-jekyll-footer div {
-    font-family: 'Montserrat' !important;
-    font-weight: 300 !important;
-    font-size: clamp(0.75rem, 0.25rem + 0.5vw, 2rem) !important;
-    line-height: 1.5;
-}
-
-.copyright.text-muted {
-    font-family: 'Vibes', cursive !important;
-    text-transform: uppercase !important;
-    font-size: clamp(0.7rem, 0.5rem + 0.5vw, 1.8rem) !important;
-}
-
-/* --- 9. RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 768px) {
-    .album-item, .video-item {
-        flex: 0 1 100%;
-    }
-    .beautiful-jekyll-footer {
-        max-width: 90% !important;
-        width: 90% !important;
-    }
-}
-
-@media (min-width: 992px) {
-    .newsletter-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 5%;
-    }
-    .toc-sidebar {
-        flex: 0 0 20%;
-        position: sticky;
-        top: 40px;
-        max-height: calc(100vh - 80px);
-        overflow-y: auto;
-    }
-    .posts-list {
-        flex: 0 0 75%;
-    }
-}
-
-/* --- 10. VISIBILITY RULES (IMPORTANT) --- */
-/* Placing these last ensures they override the flex/display block rules above */
+/* --- 8. THE FIX: VISIBILITY RULES --- */
+/* This MUST stay at the end to override the flex settings above */
 .hidden-item {
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+    .video-item, .album-item { flex: 0 1 100%; }
 }
