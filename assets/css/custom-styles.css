@@ -89,6 +89,12 @@ body, p, div {
     margin-bottom: 10px;
     
 }
+
+/* Example of what to add to your CSS file */
+.post-title {
+    margin-top: 50px; 
+}
+
 .navbar .nav-link {
     font-family: 'Vibes', cursive !important;
     font-size: 0.85rem;
