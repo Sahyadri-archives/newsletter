@@ -7,9 +7,8 @@ category: August 2025
 image: "/assets/img/Newsletter/marathiassembly.png"
 ---
 ![Marathi Assembly]({{ "/assets/img/Newsletter/marathiassembly.png" | relative_url }})
+
 On 5th August, 2025, the children of classes 5 to 8 presented an assembly In which the children gave detailed and insightful information about Maharashtra’s cultural traditions through the medium of folk songs. 
-
-
 
 Abhang, Ovi, Powada, Lavni, Vasudev, Bhajan and Gawalan were the various forms of folk songs showcased in this assembly. Some of the children also anchored the event and presented the information through PowerPoint Presentation. Videos of Ovi, Powada and Vasudev were shown during this assembly. 
 
