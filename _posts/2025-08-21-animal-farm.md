@@ -13,5 +13,3 @@ Animalism was inspired by a speech made by an elderly pig. The pig, called Old M
 Animalism was compiled into the Seven Commandments, and further shortened to a one-liner; ‘4 legs good, 2 legs bad’. One important Commandment was “All animals are equal”. The other commandments were centered around not adopting human behaviour and no interaction with humans and their property. Over the years, Animalism drastically changes form and is almost unrecognizable to those who have seen Animal Farm in its early days.
 
 Both classes, 8A and 8B, made visuals (posters) depicting the main principles of Animalism and they were put up on the bulletin board next to the Senior Audi.
-
-                                                                                                                               
