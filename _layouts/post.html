@@ -5,12 +5,6 @@ layout: base
 <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
-
-      <div class="back-button" style="margin-bottom: 20px;">
-  <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-dark btn-sm">
-    <i class="fas fa-chevron-left"></i> Back to Posts
-  </a>
-</div>
       
       <div class="post-heading">
         <h1 style="font-family: 'Amatic SC', cursive; font-size: 3.5rem; margin-bottom: 5px;">{{ page.title }}</h1>
@@ -84,6 +78,8 @@ layout: base
       {% include comments.html %}
     </div>
   </div>
-
+<a href="javascript:history.back()" class="btn btn-secondary btn-sm" style="margin-bottom: 15px;">
+  <i class="fas fa-arrow-left"></i> Go Back
+</a>
   
 </main>
