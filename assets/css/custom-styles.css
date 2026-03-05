@@ -514,6 +514,6 @@ html {
 .video-caption a { color: #008aff; text-decoration: underline; }
 
 ::selection {
-    background-color: #3297FD; /* Example: a yellow highlight background */
+    background-color: #0078D7; /* Example: a yellow highlight background */
     color: #FFFFFF;            /* This forces the text to be black */
 }
