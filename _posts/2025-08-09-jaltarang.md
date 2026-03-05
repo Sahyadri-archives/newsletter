@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Jaltarang Performance: Ripples in Rhythm
+title: "Jaltarang Performance: Ripples in Rhythm"
 date: 2025-08-09
-subtitle: By Ashrith Reddy (Grade 11)
-category: August 2025 
+subtitle: "By Ashrith Reddy (Grade 11)"
+category: August 2025
 ---
-
 
 On the ninth of August, two external artists visited school to perform for us as a part of the broader ‘Art and Literature fest’, which was all about celebrating the ‘poetry of life’ and the love for Art and Literature and Music as a whole.
 
