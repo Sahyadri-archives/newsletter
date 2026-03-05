@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Grade 8 Project: Animal Farm
+title: "Grade 8 Project: Animal Farm"
 date: 2025-08-21
-subtitle: By Asha (Grade 8)
+subtitle: "By Asha (Grade 8)"
 category: August 2025
 ---
 
