@@ -5,6 +5,10 @@ permalink: /posts/
 ---
 
 <div id="top"></div>
+<!-- Back Button HTML only -->
+<div class="back-button-container">
+  <a href="/posts/" class="back-button">← Back</a>
+</div>
 
 <div class="newsletter-container">
   
