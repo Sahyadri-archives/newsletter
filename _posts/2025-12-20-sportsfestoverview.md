@@ -4,9 +4,12 @@ title: "An Essence of a Sahyadri Sports Fest"
 date: 2025-12-20
 subtitle: "By Yuana Garg (Grade 10)"
 category: December 2025
+image: "/assets/img/Newsletter/opening-fest.png"
 ---
 
 As the sun rose to the marching of our footsteps, the first day of the Sports Fest began with a bang. The day witnessed a field packed with energy, excitement, and the spirit of friendly competition.
+
+![Sports Fest]({{ "/assets/img/Newsletter/opening-fest.png" | relative_url }})
 
 From the early morning events like the juniors’ Kho-Kho match (first ever in the school’s history) and the 200m run for the junior girls, every moment kept the audience engaged and entertained.
 
