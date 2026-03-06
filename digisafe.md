@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Digital Safety Workshop
-subtitle: Digital Safety Workshops conducted by Sayntan Sen (Founder Digital Safety India, Parent of Sahyadri School) on week ending Sep 22
+subtitle: Digital Safety Workshops conducted by Sayantan Sen (Founder Digital Safety India, Parent of Sahyadri School) on week ending Sep 22
 ---
 
 ## Chatting Safely (Classes 6 & 7)
