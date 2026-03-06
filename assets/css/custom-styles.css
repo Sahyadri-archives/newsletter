@@ -516,3 +516,42 @@ html {
     background-color: #0078D7; /* Example: a yellow highlight background */
     color: #FFFFFF;            /* This forces the text to be black */
 }
+
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-button {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .back-button-container {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .back-button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
