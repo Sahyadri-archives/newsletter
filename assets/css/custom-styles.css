@@ -63,11 +63,6 @@ h3 {
     font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
-.post-subtitle, .post-subheading {
-    font-family: 'Montserrat' !important;
-    font-size: clamp(0.25rem, 0.15rem + 1.25vw, 1.5rem) !important;
-}
-
 .post-title {
     text-transform: uppercase;
 }
@@ -560,5 +555,10 @@ html {
     padding: 8px 12px;
     font-size: 13px;
   }
+}
+
+.post-subtitle, .post-subheading {
+    font-family: 'Montserrat' !important;
+    font-size: clamp(0.25rem, 0.15rem + 1.25vw, 1.5rem) !important;
 }
 
