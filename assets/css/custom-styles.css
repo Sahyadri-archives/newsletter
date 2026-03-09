@@ -557,7 +557,13 @@ html {
   }
 }
 
-.post-subtitle, .post-subheading {
+/* In custom-styles.css */
+.post-preview .post-subtitle {
+    text-transform: uppercase !important;
+    font-family: 'Amatic SC', cursive !important;
+}
+
+.post-preview .post-subtitle, .post-preview.post-subheading {
     font-family: 'Montserrat' !important;
     font-size: clamp(0.25rem, 0.15rem + 1.25vw, 1.5rem) !important;
 }
