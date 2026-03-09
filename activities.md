@@ -12,10 +12,12 @@ permalink: /activities/
     <nav class="toc-card">
       <h2 class="toc-title">Activities</h2>
       <ul class="toc-list">
-        {% assign grouped_posts = site.posts | group_by: "category" %}
+        {% assign grouped_posts = site.activities | group_by: "category" %}
         {% for group in grouped_posts %}
           {% assign category_id = group.name | slugify | default: "general-updates" %}
-          <li><a href="#{{ category_id }}">{{ group.name | default: "General Updates" }}</a></li>
+          <li>
+            <a href="#{{ category_id }}">{{ group.name | default: "General Updates" }}</a>
+          </li>
         {% endfor %}
       </ul>
     </nav>
