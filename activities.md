@@ -43,6 +43,10 @@ permalink: /activities/
               {% endif %}
             </a>
             
+             <p class="post-meta">
+              Posted on {{ post.date | date: site.date_format }}
+            </p>
+            
             <div class="post-entry-container">
               {% if post.image %}
                 <div class="post-image">
