@@ -4,7 +4,7 @@ title: Activities
 permalink: /activities/
 ---
 
-<div id="top" style="scroll-margin-top: -100px;"></div>
+<div id="top" style="scroll-margin-top: 100px;"></div>
 
 <div class="newsletter-container">
   
