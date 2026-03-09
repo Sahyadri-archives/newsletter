@@ -10,7 +10,7 @@ author: Sahyadri
 ###############################################
 
 navbar-links:
-  Activities: "/sahyadri/activities"
+  Activities: "activities"
   Krishnamurthi:
     - Monsoon Term 2025-26: "mon25"
     - Spring Term 2025-26: "spr25"
