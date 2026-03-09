@@ -10,16 +10,16 @@ author: Sahyadri
 ###############################################
 
 navbar-links:
-  Activities: "/sahyadri/activities"
+  Activities: "activities"
   Krishnamurthi:
-    - Monsoon Term 2025-26: "/sahyadri/mon25"
-    - Spring Term 2025-26: "/sahyadri/spr25"
+    - Monsoon Term 2025-26: "mon25"
+    - Spring Term 2025-26: "spr25"
   Information:
-    - Communication: "/sahyadri/comms"
-  Newsletter: "/sahyadri/posts"
+    - Communication: "comms"
+  Newsletter: "posts"
   Resources:
-    - Photos: "/sahyadri/photos"
-    - Videos: "/sahyadri/videos"
+    - Photos: "photos"
+    - Videos: "videos"
 
   # _config.yml
 ################
