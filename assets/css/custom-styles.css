@@ -389,6 +389,7 @@ main.container-md,
 }
 
 .toc-title {
+    font: 'Amatic Sc', 'cursive';
     margin-top: 0;
     color: #404040 !important; /* Black text */
     border-bottom: 2px solid #000000;
