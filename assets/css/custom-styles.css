@@ -65,7 +65,7 @@ h3 {
 
 .post-subtitle, .post-subheading {
     font-family: 'Montserrat' !important;
-    font-size: clamp(0.75rem, 0.25rem + 1.25vw, 2.5rem) !important;
+    font-size: clamp(0.25rem, 0.15rem + 1.25vw, 1.5rem) !important;
 }
 
 .post-title {
