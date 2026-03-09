@@ -40,11 +40,7 @@ permalink: /act/
                 </h4>
               {% endif %}
             </a>
-
-            <p class="post-meta">
-              Posted on {{ post.date | date: site.date_format }}
-            </p>
-
+            
             <div class="post-entry-container">
               {% if post.image %}
                 <div class="post-image">
@@ -67,7 +63,7 @@ permalink: /act/
         </div>
       </section>
     {% else %}
-      <p>No newsletters found. Check back soon!</p>
+      <p>No Activities found. Check back soon!</p>
     {% endfor %}
   </div>
 </div>
