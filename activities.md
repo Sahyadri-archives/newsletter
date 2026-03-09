@@ -10,7 +10,7 @@ permalink: /activities/
   
   <aside class="toc-sidebar">
     <nav class="toc-card">
-      <h2 class="toc-title">Editions</h2>
+      <h2 class="toc-title">Activities</h2>
       <ul class="toc-list">
         {% assign grouped_posts = site.posts | group_by: "category" %}
         {% for group in grouped_posts %}
