@@ -53,7 +53,6 @@ h1, .term-title {
 
 h3 {
     font-family: 'Vibes', cursive !important;
-    font-weight: bold !important;
     font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
 }
 .post-meta {
@@ -389,7 +388,7 @@ main.container-md,
 }
 
 .toc-title {
-    font: 'Amatic Sc', 'cursive';
+    font: 'Vibes', sans serif !important;
     margin-top: 0;
     color: #404040 !important; /* Black text */
     border-bottom: 2px solid #000000;
