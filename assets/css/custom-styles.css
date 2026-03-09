@@ -47,6 +47,10 @@ h1, .term-title {
     font-size: clamp(2rem, 1.5rem + 2.73vw, 8rem) !important;
 }
 
+.post-heading {
+    margin-top: 100px;
+}
+
 .post-entry {
     font-size: clamp(0.75rem, 0.5rem + 0.6vw, 2rem) !important;
 }
