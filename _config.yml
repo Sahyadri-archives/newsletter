@@ -270,14 +270,22 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
+      type: "posts" # Settings for the _posts folder
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
+      comments: true
+      social-share: true
   -
     scope:
-      path: "" # any file that's not a post will be a "page" layout by default
+      path: ""
+      type: "activities" # Settings for the _activities folder
+    values:
+      layout: "post"
+      comments: true
+      social-share: true
+  -
+    scope:
+      path: "" # Default for regular pages (index.md, etc.)
     values:
       layout: "page"
 
@@ -297,6 +305,9 @@ plugins:
   - jekyll-sitemap
   
 collections:
+activities:
+    output: true
+    permalink: /activities/:title/
   albums:
     output: false # We don't need individual pages for each album, just the list
 # Beautiful Jekyll / Dean Attali
