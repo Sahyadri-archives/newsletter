@@ -10,16 +10,16 @@ author: Sahyadri
 ###############################################
 
 navbar-links:
-  Activities: "activities"
+  Activities: "/sahyadri/activities"
   Krishnamurthi:
-    - Monsoon Term 2025-26: "mon25"
-    - Spring Term 2025-26: "spr25"
+    - Monsoon Term 2025-26: "/sahyadri/mon25"
+    - Spring Term 2025-26: "/sahyadri/spr25"
   Information:
-    - Communication: "comms"
-  Newsletter: "posts"
+    - Communication: "/sahyadri/comms"
+  Newsletter: "/sahyadri/posts"
   Resources:
-    - Photos: "photos"
-    - Videos: "videos"
+    - Photos: "/sahyadri/photos"
+    - Videos: "/sahyadri/videos"
 
   # _config.yml
 ################
@@ -303,9 +303,9 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  
+
 collections:
-activities:
+  activities:
     output: true
     permalink: /activities/:title/
   albums:
