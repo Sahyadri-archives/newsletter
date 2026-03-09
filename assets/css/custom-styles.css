@@ -62,9 +62,11 @@ h3 {
     font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
-.post-subtitle {
-    font-family: 'Amatic Sc' !important;
-    font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
+
+.posts-list .post-preview .post-subtitle {
+    font-family: 'Amatic SC', cursive !important;
+  font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
+    margin-top: 5px !important;
 }
 
 .post-title {
