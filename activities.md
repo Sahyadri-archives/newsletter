@@ -32,7 +32,8 @@ permalink: /activities/
           {{ group.name | default: "General Updates" }}
         </h2>
 
-        {% for post in group.items %}
+        {% assign sorted_posts = group.items | reverse %}
+        {% for post in sorted_posts %}
           <article class="post-preview">
             <a href="{{ post.url | relative_url }}" style="text-decoration: none;">
               <h3 class="post-title">{{ post.title }}</h3>
@@ -65,7 +66,7 @@ permalink: /activities/
         {% endfor %}
         
         <div class="back-to-top">
-           <a href="#top">↑ Back to top</a>
+            <a href="#top">↑ Back to top</a>
         </div>
       </section>
     {% else %}
