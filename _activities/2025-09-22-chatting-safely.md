@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chatting Safely - Classes 6 & 7"
-subheading: by Sayantan Sen (Founder Digital Safety India, Parent of Sahyadri School)
+subtitle: by Sayantan Sen (Founder Digital Safety India, Parent of Sahyadri School)
 date: 2025-09-22
 category: Digital Safety Workshop
 ---
