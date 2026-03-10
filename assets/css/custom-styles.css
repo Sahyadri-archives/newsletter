@@ -500,7 +500,7 @@ html {
 
 .back-navigation {
     margin-top: 150px;
-    margin-bottom: 10px;
+    margin-bottom: -30px;
 }
 
 .video-caption a { color: #008aff; text-decoration: underline; }
