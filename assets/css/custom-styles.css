@@ -48,7 +48,7 @@ h1, .term-title {
 }
 
 .post-heading {
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .post-entry {
@@ -500,7 +500,6 @@ html {
 
 .back-navigation {
     margin-top: 150px;
-    margin-bottom: -30px;
 }
 
 .video-caption a { color: #008aff; text-decoration: underline; }
