@@ -498,4 +498,9 @@ html {
     text-decoration: none;
 }
 
+.back-navigation {
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
 .video-caption a { color: #008aff; text-decoration: underline; }
