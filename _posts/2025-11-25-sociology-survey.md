@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Guiding Graphs: A Sociological Survey"
+title: "Guiding Graphs, A Sociological Survey"
 date: 2025-11-25
 subtitle: "By Bhagyashree Patil (Teacher)"
 category: November 2025
