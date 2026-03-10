@@ -4,9 +4,12 @@ title: "Medical Outreach Program"
 date: 2025-08-05
 subtitle: "By Reshma Akka"
 category: August 2025
+image: "/assets/img/Newsletter/medicaloutreach.png"
 ---
 
 As part of the Medical Outreach, ASHA workers are being trained in prenatal best practices and overall well being of expectant mothers at the village level under the ‘the First 1000 days of life’ awareness initiative. 
+
+![Medical Outreach]({{ "/assets/img/Newsletter/medicaloutreach.png" | relative_url }})
 
 A baby is most receptive in the mother’s womb and every maternal thought and action shapes the growth of the baby. It is studied that many psycho-social problems along with cognitive dysfunction of childhood and adulthood are related to maternal trauma during 9 months of pregnancy. 
 
