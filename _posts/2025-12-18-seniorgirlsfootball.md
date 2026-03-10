@@ -4,9 +4,12 @@ title: "Football Match: Senior Girls"
 date: 2025-12-18
 subtitle: "By Ishita and Prisha (Grade 10)"
 category: December 2025
+image: "/assets/img/Newsletter/Football _ Senior Girls .JPG"
 ---
 
 It's a corner. Nayantara stands behind the ball, eyes fixed on the goal: Chick… Chick… BOOM! The ball soars in the air only to be perfectly cleared by Naina as it reaches the ground, and the ball is out once again.
+
+![Football Senior Girls]({{ "/assets/img/Newsletter/Football _ Senior Girls .JPG" | relative_url }})
 
 The 9-10th vs 11-12th girls’ football match, one of the first events of this year’s much-awaited three-day sports fest, was one packed with skill, camaraderie, and adrenaline.
  
