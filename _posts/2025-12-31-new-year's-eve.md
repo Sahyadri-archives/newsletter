@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New Year's Eve"
-date: 2026-03-01
+date: 2025-12-31
 subtitle: "By Avishi Chaudhary and Ira Akode (Grade 8)"
 category: December 2025 
 ---
