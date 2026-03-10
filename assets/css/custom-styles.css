@@ -176,6 +176,10 @@ body, p, div {
 
 /* --- Customized Load More Button --- */
 
+.load-more-container{
+    align: center;
+}
+
 .btn-load-more {
   /* Centering & Display */
   display: inline-block;
