@@ -2,7 +2,7 @@
 layout: post
 title: "Football Camp"
 date: 2025-08-21
-subtitle: "By Aarav (Grade 12)"
+subtitle: "By Aarav Mitra (Grade 12)"
 category: August 2025
 ---
 
