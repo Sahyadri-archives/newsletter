@@ -4,9 +4,12 @@ title: "Dorm Hikes"
 date: 2025-07-06
 subtitle: "By Dimpika Mittal (Grade 11)"
 category: August 2025
+image: "/assets/img/Newsletter/dormhike.png"
 ---
 
 On 6th July, Grade 11 set out for a hike to Shringeshwar. We started early in the morning, the air still cool from the night. The sky was cloudy, and soon a light drizzle began to fall. The gentle rain added freshness to the air, making the green hills shine and the earthy smell of wet soil fill our senses. 
+
+![Dorm Hike]({{ "/assets/img/Newsletter/dormhike.png" | relative_url }})
 
 Walking together with friends, our shoes splashing through little puddles, was pure joy. Before leaving, the school kitchen had packed us a simple but delicious lunch—Thepla and Aloo Ki Sabji. Carrying our food in our backpacks, we felt ready for the day’s adventure ahead.
 
