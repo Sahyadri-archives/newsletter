@@ -35,7 +35,7 @@ permalink: /posts/
             <a href="{{ post.url | relative_url }}" style="text-decoration: none;">
               <h3 class="post-title">{{ post.title }}</h3>
               {% if post.subtitle %}
-                <h4 class="post-subtitle" style="font-family: 'Montserrat'; font-weight: 300; color: #777; font-size: 1.1em; margin-top: -5px;">
+                <h4 class="post-subtitle">
                   {{ post.subtitle }}
                 </h4>
               {% endif %}
