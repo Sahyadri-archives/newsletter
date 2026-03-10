@@ -4,7 +4,7 @@ title: Newsletter
 permalink: /posts/
 ---
 
-<div id="top" style="scroll-margin-top: 100px;"></div>
+<div id="top" style="scroll-margin-top: 200px;"></div>
 
 <div class="newsletter-container">
   
