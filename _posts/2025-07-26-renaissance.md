@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "All the World’s a Stage: Renaissance Fair"
+title: "All the World's a Stage: Renaissance Fair"
 date: 2025-07-26
 subtitle: "By Samaira and Anvi (Grade 9)"
 category: August 2025
