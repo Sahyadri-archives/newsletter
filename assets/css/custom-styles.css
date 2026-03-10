@@ -176,8 +176,11 @@ body, p, div {
 
 /* --- Customized Load More Button --- */
 
-.load-more-container{
-    align: center;
+.load-more-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .btn-load-more {
