@@ -176,47 +176,38 @@ body, p, div {
 
 /* --- Customized Load More Button --- */
 
-.load-more-container {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 20px;
-    width: 100%;
+.btn-load-more {
+  /* Colors - using the sage green from your site */
+  background-color: #5d6d5a; 
+  color: #ffffff;
+  
+  /* Typography */
+  font-family: inherit; /* Matches your site's font */
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  /* Sizing and Spacing */
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px; /* Subtle rounding for a modern feel */
+  cursor: pointer;
+  
+  /* Animation */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.load-more-btn {
-    /* Typography matches your category headings and TOC links */
-    font-family: 'Amatic SC', sans-serif !important;
-    font-weight: bold !important;
-    font-size: clamp(1.5rem, 1rem + 1vw, 2.5rem) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px;
-
-    /* Colors match your .toc-card style */
-    background-color: #BDCDC0 !important; 
-    color: #404040 !important;
-    
-    /* Layout & Border */
-    padding: 10px 40px;
-    border: 2px solid #404040;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    
-    /* Smooth transition for hover effects */
-    transition: all 0.3s ease;
-    display: inline-block;
+/* Hover State */
+.btn-load-more:hover {
+  background-color: #4a5748; /* Slightly darker green */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
 }
 
-.load-more-btn:hover {
-    /* Inverts colors on hover to match TOC link behavior */
-    background-color: #404040 !important;
-    color: #ffffff !important;
-    transform: translateY(-3px); /* Subtle lift */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
-
-.load-more-btn:active {
-    transform: translateY(0);
+/* Active/Click State */
+.btn-load-more:active {
+  transform: translateY(0);
 }
 
 /* Ensure hidden items are strictly hidden */
