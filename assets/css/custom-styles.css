@@ -61,6 +61,7 @@ h3 {
 }
 .post-meta {
     font-family: 'Vibes', cursive !important;
+    font-weight: 300 !important;
     font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
