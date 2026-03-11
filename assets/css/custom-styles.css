@@ -57,11 +57,11 @@ h1, .term-title {
 
 h3 {
     font-family: 'Montserrat' !important;
+    font-weight: 300 !important;
     font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
 }
 .post-meta {
     font-family: 'Vibes', cursive !important;
-    font-weight: 300 !important;
     font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
