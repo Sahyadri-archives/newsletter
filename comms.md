@@ -33,6 +33,6 @@ subtitle:
 <br>
 **Study Centre** - [studycentre@sahyadrischool.org](mailto:studycentre@sahyadrischool.org){:target="_blank"}
 <br><br><br>
-### Don'ts
+### Don&rsquo;ts
 
 * Send emails or WhatsApp messages directly to teachers or house parents
