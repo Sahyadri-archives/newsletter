@@ -57,7 +57,6 @@ h1, .term-title {
 
 h3 {
     font-family: 'Montserrat' !important;
-    font-weight: bold;
     font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
 }
 .post-meta {
