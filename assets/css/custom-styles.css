@@ -104,7 +104,6 @@ body, p, div {
 }
 .navbar .nav-link {
     font-family: 'Vibes', cursive !important;
-    font-size: 0.85rem;
     font-transform: uppercase ;
     font-colour: "#E8F3DF" !important;
     font-hover: "#FFFFFF" !important;
