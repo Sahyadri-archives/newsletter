@@ -73,7 +73,7 @@ h3 {
 }
 
 .post-subtitle {
-    font-family: 'Amatic SC', cursive !important;
+    font-family: 'Montserrat', cursive !important;
   font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
     margin-top: 5px !important;
     font-weight: bold;
@@ -95,7 +95,7 @@ body, p, div {
 }
 
 /* Specifically for the egory/Post Meta as you asked earlier */
-.blog-tags, .post-egories, .blog-tags, .page-subheading {
+.blog-tags, .blog-tags {
     font-family: 'Amatic SC' !important;
     font-weight: bold;
     font-size: 1.25rem;
@@ -105,7 +105,6 @@ body, p, div {
 }
 .navbar .nav-link {
     font-family: 'Vibes', cursive !important;
-    font-size: 0.85rem;
     font-transform: uppercase ;
     font-colour: "#E8F3DF" !important;
     font-hover: "#FFFFFF" !important;
