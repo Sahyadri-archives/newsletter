@@ -37,7 +37,7 @@ h2 {
     margin-bottom: 15px !important;
 }
 
-.navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link {
+.navbar-custom .navbar-nav .nav-link {
     font-size: clamp(1.25rem, 0.75rem + 1.0vw, 6rem) !important;    
 }
 
