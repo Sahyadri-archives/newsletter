@@ -20,7 +20,6 @@ main .col-lg-10 {
     margin-left: auto;
     margin-right: auto;
 }
-
 /* Reduce the width of the main body content only */
 main.container-md {
     max-width: 65% !important; /* Change this % to make it narrower */
@@ -28,9 +27,8 @@ main.container-md {
     margin: 0 auto !important; /* Keeps the narrow body centered */
 }
 h1 {
-    font-size: clamp(2.5rem, 2rem + 3.85vw, 10rem) !important;
+    font-size: clamp(2.5rem, 2.5rem + 2.73vw, 8rem) !important;
     margin-bottom: 20px !important;
-    margin-top: 20px !important;
 }
 
 h2 {
@@ -59,11 +57,11 @@ h1, .term-title {
 h3 {
     font-family: 'Montserrat' !important;
     font-weight: 300 !important;
-    font-size: clamp(1.25rem, 0.75rem + 1.0vw, 6rem) !important;
+    font-size: clamp(1.25rem, 0.75rem + 1.0vw, 4rem) !important;
 }
 .post-meta {
-    font-family: 'Montserrat', cursive !important;
-    font-size: clamp(0.6rem, 0.4rem + 0.6vw, 3rem) !important;
+    font-family: 'Vibes', cursive !important;
+    font-size: clamp(0.75rem, 0.5rem + 0.85vw, 3rem) !important;
 }
 
 
@@ -77,6 +75,7 @@ h3 {
     font-family: 'Amatic SC', cursive !important;
   font-size: clamp(1rem, 0.5rem + 1.0vw, 3.5rem) !important;
     margin-top: 5px !important;
+    font-weight: bold;
 }
 
 .post-title {
@@ -94,8 +93,8 @@ body, p, div {
     font-size: clamp(1rem, 0.5rem + 0.68vw, 2.5rem);
 }
 
-/* Specifically for the egory/Post Meta as you asked earlier */
-.blog-tags, .blog-tags {
+/* Specifically for the Category/Post Meta as you asked earlier */
+.blog-tags, .post-categories, .blog-tags, .page-subheading {
     font-family: 'Amatic SC' !important;
     font-weight: bold;
     font-size: 1.25rem;
@@ -105,6 +104,7 @@ body, p, div {
 }
 .navbar .nav-link {
     font-family: 'Vibes', cursive !important;
+    font-size: 0.85rem;
     font-transform: uppercase ;
     font-colour: "#E8F3DF" !important;
     font-hover: "#FFFFFF" !important;
@@ -487,7 +487,7 @@ main.container-md,
     }
 }
 
-/* 5. SMOOTH SCROLL & EGORY HEADINGS */
+/* 5. SMOOTH SCROLL & CATEGORY HEADINGS */
 html {
     scroll-behavior: smooth;
 }
@@ -496,7 +496,7 @@ html {
     font-family: 'Amatic SC', sans-serif !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
-    font-size: clamp(1.25rem, 1rem + 2.75vw, 7rem) !important;
+    font-size: clamp(2rem, 1.5rem + 2.73vw, 8rem) !important;
     border-bottom: 2px solid #735362;
     padding-bottom: 10px;
     margin-bottom: 25px;
