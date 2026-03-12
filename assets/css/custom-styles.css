@@ -24,7 +24,7 @@ main .col-lg-10 {
 .nav-link, 
 header nav ul li a, 
 .navbar-nav a {
-    font-size: clamp(0.9rem, 1vw + 0.25rem, 4rem) !important;
+    font-size: clamp(0.9rem, 0.75vw + 0.25rem, 4rem) !important;
     text-transform: uppercase; /* Matches your current styling */
     letter-spacing: 0.05rem;    /* Improves readability for larger text */
 }
