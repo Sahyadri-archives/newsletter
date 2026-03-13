@@ -535,3 +535,118 @@ html {
 .dropdown-toggle::after {
     vertical-align: middle;
 }
+
+/* --- Search Overlay Styling --- */
+
+/* The full-screen background when search is active */
+#search-overlay {
+    background-color: rgba(102, 133, 113, 0.95) !important; /* Matches your navbar-col (#668571) */
+}
+
+/* The search input box */
+#search-input {
+    background-color: #FFFFFF !important;
+    color: #3E3830 !important; /* Matches your text-col */
+    border: 2px solid #BBC4B4 !important; /* Matches your navbar-border-col */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Results list styling */
+/* 1. Corrected Search Overlay Background */
+/* --- Optimized Search Overlay (Integrated) --- */
+
+
+/* 1. Backdrop - Extra Transparent (0.3) */
+#beautifuljekyll-search-overlay {
+    background-color: rgba(93, 109, 90, 0.3) !important; 
+    backdrop-filter: blur(4px);
+    z-index: 9999 !important;
+    position: fixed;
+    text-align: center;
+}
+
+/* 2. The Thinner Search Bar */
+#nav-search-input {
+    background-color: #ffffff !important;
+    color: #404040 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300 !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    
+    /* Dimensions */
+    width: 40% !important; 
+    height: 32px !important; 
+    padding: 0 40px 0 20px !important; 
+    border-radius: 20px !important; 
+    
+    /* Position */
+    margin: 25px auto 0 auto !important; 
+    display: block !important;
+    font-size: 0.95rem !important;
+}
+
+/* 3. Placeholder Styling */
+#nav-search-input::placeholder {
+    font-family: 'Amatic SC', cursive !important;
+    font-size: 1.1rem !important; 
+    color: #BDCDC0 !important;
+    text-transform: uppercase;
+}
+
+/* 4. The Exit Button - Perfectly Centered Vertically */
+#nav-search-exit, 
+#beautifuljekyll-search-close {
+    color: #888 !important;
+    font-size: 1.1rem !important;
+    cursor: pointer;
+    background: none !important;
+    border: none !important;
+    
+    position: absolute !important;
+    
+    /* Vertical Adjustment: Matches bar margin + half height adjustment */
+    top: 33px !important; 
+    
+    /* Horizontal Adjustment: Center (50%) + half bar width (20%) - nudge (30px) */
+    left: calc(50% + 20% - 30px) !important;
+    
+    z-index: 10001 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+}
+
+#nav-search-exit:hover {
+    color: #404040 !important;
+}
+
+/* 5. Mobile Adjustments */
+@media (max-width: 768px) {
+    #nav-search-input {
+        width: 85% !important;
+        margin-top: 20px !important;
+    }
+    #nav-search-exit, 
+    #beautifuljekyll-search-close {
+        left: calc(50% + 42.5% - 30px) !important;
+        top: 28px !important;
+    }
+}
+
+/* 6. Results List */
+#beautifuljekyll-search-results {
+    max-width: 40% !important;
+    margin: 15px auto !important;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#beautifuljekyll-search-results li a {
+    font-family: 'Amatic SC', cursive !important;
+    font-size: 1.4rem !important;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
