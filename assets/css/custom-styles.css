@@ -122,8 +122,7 @@ body, p, div {
 /* --- Updated Album Grid (Matches Video Grid) --- */
 .album-grid {
     display: flex;
-    flex-direction: row-reverse; 
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px; /* Increased from 30px to match video-grid gap */
     max-width: 1200px; /* Increased from 1000px to match video-grid */
@@ -241,8 +240,7 @@ body, p, div {
 
 .video-grid {
     display: flex;
-    flex-wrap: wrap-reverse; /* Your preferred reverse ordering */
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     max-width: 1200px;
