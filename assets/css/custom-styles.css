@@ -648,3 +648,21 @@ html {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     text-decoration: none;
 }
+
+/* Enable hover dropdowns for desktop screens */
+@media only screen and (min-width: 992px) {
+  .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block !important;
+    margin-top: 0 !important; /* Remove gap so mouse doesn't leave the trigger area */
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Optional: Smooth fade-in effect */
+  .dropdown-menu {
+    display: block !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+  }
+}
