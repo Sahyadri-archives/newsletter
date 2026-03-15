@@ -119,10 +119,6 @@ body, p, div {
     font-hover: "#FFFFFF" !important;
 }
 
-.copyright text-muted {
-    font-family: 'Amatic SC', sans serif !important;
-}
-
 /* --- Updated Album Grid (Matches Video Grid) --- */
 .album-grid {
     display: flex;
@@ -351,7 +347,7 @@ body, p, div {
 .copyright.text-muted {
     font-family: 'Poiret One', system-ui, sans-serif !important;
     text-transform: uppercase !important;
-    /* Slightly smaller fluid scale for the legal line */
+    font-weight: bold !important;
     font-size: clamp(0.7rem, 0.5rem + 0.5vw, 1.8rem) !important;
     margin-top: 20px;
 }
