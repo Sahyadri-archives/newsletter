@@ -1,9 +1,9 @@
 <div class="pdf-container">
     <div class="pdf-thumbnail">
-        <a href="{{ include.file | relative_url }}" download>
+        <a href="{{ include.pdf_path | relative_url }}" download>
             <img 
-                src="{{ include.thumbnail | default: '/assets/Ninad/17.png' | relative_url }}" 
-                alt="Download {{ include.caption | default: 'PDF' }}"
+                src="{{ include.thumbnail_path | relative_url }}" 
+                alt="Download PDF"
                 style="width: 100%; max-width: 200px; height: auto; display: block;"
             >
         </a>
@@ -11,7 +11,7 @@
 
     <div class="pdf-footer">
         <div class="pdf-actions">
-            <a href="{{ include.file | relative_url }}" 
+            <a href="{{ include.pdf_path | relative_url }}" 
                download 
                class="pdf-btn pdf-btn-primary">
                Download PDF
