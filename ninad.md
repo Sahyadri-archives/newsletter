@@ -4,4 +4,7 @@ title: Ninad
 subtitle: Click on thumbnail to open the album
 ---
 
-{% include pdf.html file="/assets/Ninads/17.pdf" caption="Ninad 2017" %}
+{% include pdf-viewer.html 
+   thumbnail_path="/assets/Ninad/17.png" 
+   pdf_path="/assets/Ninad/ninad_2017.pdf" 
+%}
