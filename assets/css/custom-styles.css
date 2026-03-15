@@ -669,23 +669,23 @@ html {
 }
 
 
-/* PDF Embed Container */
+/* Container & Wrapper */
 .pdf-container {
-    margin-bottom: 2rem;
-    border: 1px solid #eee;
-    padding: 10px;
-    border-radius: 8px;
-    background: #fafafa;
+    margin-bottom: 2.5rem;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fdfdfd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Responsive Wrapper (4:3 Aspect Ratio) */
 .pdf-wrapper {
     position: relative;
-    padding-bottom: 75%; /* Adjust this % to change height */
+    padding-bottom: 75%; 
     height: 0;
     overflow: hidden;
-    border-radius: 4px;
-    background: #fff;
+    border-radius: 6px;
+    background: #eee;
 }
 
 .pdf-wrapper iframe {
@@ -697,43 +697,75 @@ html {
     border: 0;
 }
 
-/* Footer & Caption */
+/* Footer Layout */
 .pdf-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    padding: 0 5px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .pdf-caption {
     font-style: italic;
-    color: #666;
+    color: #555;
     font-size: 0.9rem;
+    flex: 1;
 }
 
-/* Download Button */
-.pdf-download-btn {
+/* Button Grouping */
+.pdf-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Base Button Style */
+.pdf-btn {
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Primary Button (Download) */
+.pdf-btn-primary {
     background-color: #007bff;
-    color: white !important; /* Overriding default link colors */
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: bold;
-    transition: background 0.2s ease;
+    color: white !important;
 }
 
-.pdf-download-btn:hover {
+.pdf-btn-primary:hover {
     background-color: #0056b3;
-    text-decoration: none;
 }
 
-/* Mobile Tweak: Ensure the button doesn't squish on small screens */
-@media (max-width: 480px) {
+/* Secondary Button (Fullscreen) */
+.pdf-btn-secondary {
+    background-color: #f0f0f0;
+    color: #333 !important;
+    border: 1px solid #ccc;
+}
+
+.pdf-btn-secondary:hover {
+    background-color: #e2e2e2;
+    border-color: #bbb;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
     .pdf-footer {
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-start;
+    }
+    .pdf-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .pdf-btn {
+        flex: 1;
         text-align: center;
     }
 }
