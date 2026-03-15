@@ -669,79 +669,100 @@ html {
 }
 
 
-/* 1. The Wrapper (Add this around your {% include %} calls in ninad.md) */
+/* --- PDF Grid Container --- */
 .pdf-grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* 2. Individual Container Logic */
+/* --- Individual PDF Item --- */
 .pdf-container {
-    /* Desktop: 4 items per row (25% minus gap) */
-    flex: 0 0 calc(25% - 20px);
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
+  /* Default: 4 items per row on desktop */
+  flex: 0 0 calc(25% - 15px); 
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
-/* 3. The Card Style */
+/* --- The Card Styling --- */
 .pdf-card {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    background: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pdf-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* 4. Image Styling */
+/* --- Image / Thumbnail Styling --- */
+.pdf-thumbnail-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
 .pdf-img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    display: block;
-    margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4; /* Keeps all thumbnails uniform */
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
 }
 
-/* 5. Button Styling */
+/* --- The Download Button (Sage Green Theme) --- */
 .pdf-btn-primary {
-    display: inline-block;
-    background-color: #007bff;
-    color: white !important;
-    padding: 8px 16px;
-    border-radius: 5px;
-    text-decoration: none !important;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background 0.2s;
-    width: 100%;
+  display: block;
+  background-color: #7a8d75; /* Sage green to match your header */
+  color: #ffffff !important;
+  padding: 10px 5px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Pushes button to bottom if image heights vary */
 }
 
 .pdf-btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #5f6e5a; /* Darker green on hover */
 }
 
-/* 6. Responsive Rules (Mobile: 2 per row) */
+/* --- Responsive Layout Rules --- */
+
+/* Tablets & Small Desktops (3 per row) */
 @media (max-width: 992px) {
-    .pdf-container {
-        flex: 0 0 calc(50% - 20px); /* 2 per row on tablets/phones */
-    }
+  .pdf-container {
+    flex: 0 0 calc(33.33% - 14px);
+  }
 }
 
-@media (max-width: 480px) {
-    .pdf-grid-container {
-        gap: 10px;
-    }
-    .pdf-container {
-        flex: 0 0 calc(50% - 10px);
-    }
+/* Mobile Phones (2 per row as requested) */
+@media (max-width: 768px) {
+  .pdf-grid-container {
+    gap: 10px;
+  }
+  .pdf-container {
+    flex: 0 0 calc(50% - 5px);
+    margin-bottom: 15px;
+  }
+  .pdf-btn-primary {
+    font-size: 10px;
+    padding: 8px 2px;
+  }
 }
