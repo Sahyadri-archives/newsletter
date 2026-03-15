@@ -682,7 +682,7 @@ html {
 
 /* --- Individual PDF Item --- */
 .pdf-container {
-  /* Default: 4 items per row on desktop */
+  /* Desktop: 4 items per row */
   flex: 0 0 calc(25% - 15px); 
   box-sizing: border-box;
   margin-bottom: 30px;
@@ -693,7 +693,7 @@ html {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  padding: 12px;
+  padding: 10px; /* Padding inside the card */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -706,27 +706,24 @@ html {
 }
 
 /* --- Image / Thumbnail Styling --- */
-.pdf-thumbnail-link {
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-
 .pdf-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4; /* Keeps all thumbnails uniform */
+  aspect-ratio: 3 / 4; 
   object-fit: cover;
   border-radius: 2px;
   display: block;
 }
 
-/* --- The Download Button (Sage Green Theme) --- */
+/* --- The Download Button (With 4-side Margins) --- */
 .pdf-btn-primary {
   display: block;
-  background-color: #7a8d75; /* Sage green to match your header */
+  background-color: #7a8d75; /* Sage green from your header */
   color: #ffffff !important;
+  
+  /* MARGIN ON ALL 4 SIDES */
+  margin: 10px 8px 8px 8px; 
+  
   padding: 10px 5px;
   border-radius: 4px;
   text-decoration: none !important;
@@ -736,7 +733,7 @@ html {
   letter-spacing: 1px;
   text-align: center;
   transition: background-color 0.3s ease;
-  margin-top: auto; /* Pushes button to bottom if image heights vary */
+  margin-top: auto; /* Keeps button at the bottom of the card */
 }
 
 .pdf-btn-primary:hover {
@@ -745,14 +742,14 @@ html {
 
 /* --- Responsive Layout Rules --- */
 
-/* Tablets & Small Desktops (3 per row) */
+/* Tablets (3 per row) */
 @media (max-width: 992px) {
   .pdf-container {
     flex: 0 0 calc(33.33% - 14px);
   }
 }
 
-/* Mobile Phones (2 per row as requested) */
+/* Mobile Phones (2 per row) */
 @media (max-width: 768px) {
   .pdf-grid-container {
     gap: 10px;
@@ -764,5 +761,6 @@ html {
   .pdf-btn-primary {
     font-size: 10px;
     padding: 8px 2px;
+    margin: 8px 4px 4px 4px; /* Slightly smaller margins on mobile */
   }
 }
