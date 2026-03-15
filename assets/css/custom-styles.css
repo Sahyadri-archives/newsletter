@@ -15,6 +15,10 @@ main .col-lg-10 {
     font-weight: bold !important;
 }
 
+.page-heading {
+    margin-top: 2vh !important;    
+}
+
 /* Target only the container inside the header */
 .intro-header .container-md, 
 .intro-header .container-lg, 
