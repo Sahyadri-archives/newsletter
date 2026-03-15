@@ -669,135 +669,79 @@ html {
 }
 
 
-/* Container & Wrapper */
+/* 1. The Wrapper (Add this around your {% include %} calls in ninad.md) */
+.pdf-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* 2. Individual Container Logic */
 .pdf-container {
-    margin-bottom: 2.5rem;
-    border: 1px solid #ddd;
-    padding: 12px;
-    border-radius: 10px;
-    background: #fdfdfd;
+    /* Desktop: 4 items per row (25% minus gap) */
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. The Card Style */
+.pdf-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.pdf-wrapper {
-    position: relative;
-    padding-bottom: 75%; 
-    height: 0;
-    overflow: hidden;
-    border-radius: 6px;
-    background: #eee;
+.pdf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.pdf-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* 4. Image Styling */
+.pdf-img {
     width: 100%;
-    height: 100%;
-    border: 0;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 15px;
 }
 
-/* Footer Layout */
-.pdf-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.pdf-caption {
-    font-style: italic;
-    color: #555;
-    font-size: 0.9rem;
-    flex: 1;
-}
-
-/* Button Grouping */
-.pdf-actions {
-    display: flex;
-    gap: 8px;
-}
-
-/* Base Button Style */
-.pdf-btn {
-    padding: 8px 14px;
-    border-radius: 5px;
-    text-decoration: none !important;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    display: inline-block;
-    white-space: nowrap;
-}
-
-/* Primary Button (Download) */
+/* 5. Button Styling */
 .pdf-btn-primary {
+    display: inline-block;
     background-color: #007bff;
     color: white !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+    width: 100%;
 }
 
 .pdf-btn-primary:hover {
     background-color: #0056b3;
 }
 
-/* Secondary Button (Fullscreen) */
-.pdf-btn-secondary {
-    background-color: #f0f0f0;
-    color: #333 !important;
-    border: 1px solid #ccc;
-}
-
-.pdf-btn-secondary:hover {
-    background-color: #e2e2e2;
-    border-color: #bbb;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .pdf-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .pdf-actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-    .pdf-btn {
-        flex: 1;
-        text-align: center;
+/* 6. Responsive Rules (Mobile: 2 per row) */
+@media (max-width: 992px) {
+    .pdf-container {
+        flex: 0 0 calc(50% - 20px); /* 2 per row on tablets/phones */
     }
 }
 
-/* The container that holds all the PDF items */
-.pdf-grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between the items */
-    justify-content: flex-start;
-    margin: 20px 0;
-}
-
-/* Default for Desktop: 4 items per row */
-/* We subtract the gap to make them fit perfectly */
-.pdf-grid-container .pdf-container {
-    flex: 0 0 calc(25% - 20px); 
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* Mobile: 2 items per row (for screens smaller than 768px) */
-@media (max-width: 768px) {
-    .pdf-grid-container .pdf-container {
-        flex: 0 0 calc(50% - 20px);
+@media (max-width: 480px) {
+    .pdf-grid-container {
+        gap: 10px;
     }
-}
-
-/* Ensure the image takes up full width of its small container */
-.pdf-thumbnail img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    border: 1px solid #ddd;
+    .pdf-container {
+        flex: 0 0 calc(50% - 10px);
+    }
 }
