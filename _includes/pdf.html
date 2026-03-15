@@ -11,8 +11,20 @@
             {{ include.caption | default: "Document Preview" }}
         </div>
         
-        <a href="{{ include.file | relative_url }}" download class="pdf-download-btn">
-           Download PDF
-        </a>
+        <div class="pdf-actions">
+            <a href="{{ include.file | relative_url }}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="pdf-btn pdf-btn-secondary"
+               title="Open in new tab">
+               View Fullscreen ↗
+            </a>
+
+            <a href="{{ include.file | relative_url }}" 
+               download 
+               class="pdf-btn pdf-btn-primary">
+               Download PDF
+            </a>
+        </div>
     </div>
 </div>
