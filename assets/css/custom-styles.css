@@ -10,6 +10,9 @@ main .col-lg-10 {
     max-width: 100% !important;
     margin-left: 0 !important;
 }
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
+    font-family: 'Poiret One', system-ui, sans-serif !important;
+}
 
 /* Target only the container inside the header */
 .intro-header .container-md, 
