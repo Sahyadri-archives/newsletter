@@ -1,25 +1,16 @@
 <div class="pdf-container">
-    <div class="pdf-wrapper">
-        <iframe 
-            src="{{ include.file | relative_url }}" 
-            allowfullscreen>
-        </iframe>
+    <div class="pdf-thumbnail">
+        <a href="{{ include.file | relative_url }}" download>
+            <img 
+                src="{{ include.thumbnail | default: '/assets/images/pdf-placeholder.png' | relative_url }}" 
+                alt="Download {{ include.caption | default: 'PDF' }}"
+                style="width: 100%; max-width: 200px; height: auto; display: block;"
+            >
+        </a>
     </div>
 
     <div class="pdf-footer">
-        <div class="pdf-caption">
-            {{ include.caption | default: "Document Preview" }}
-        </div>
-        
         <div class="pdf-actions">
-            <a href="{{ include.file | relative_url }}" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="pdf-btn pdf-btn-secondary"
-               title="Open in new tab">
-               View Fullscreen ↗
-            </a>
-
             <a href="{{ include.file | relative_url }}" 
                download 
                class="pdf-btn pdf-btn-primary">
