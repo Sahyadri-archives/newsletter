@@ -673,17 +673,16 @@ html {
 .pdf-grid-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px; /* Gap between cards */
   justify-content: flex-start;
   padding: 20px 0;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- Individual PDF Item --- */
+/* --- Individual PDF Item Container --- */
 .pdf-container {
-  /* Desktop: 4 items per row */
-  flex: 0 0 calc(25% - 15px); 
+  flex: 0 0 calc(25% - 19px); /* 4 per row */
   box-sizing: border-box;
   margin-bottom: 30px;
 }
@@ -693,10 +692,11 @@ html {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  padding: 10px; /* Padding inside the card */
+  padding: 12px;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Ensures button stays at bottom */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -713,16 +713,17 @@ html {
   object-fit: cover;
   border-radius: 2px;
   display: block;
+  margin-bottom: 15px; /* THIS CREATES THE GAP BELOW IMAGE */
 }
 
-/* --- The Download Button (With 4-side Margins) --- */
+/* --- The Download Button --- */
 .pdf-btn-primary {
   display: block;
-  background-color: #7a8d75; /* Sage green from your header */
+  background-color: #7a8d75; /* Sage green */
   color: #ffffff !important;
   
-  /* MARGIN ON ALL 4 SIDES */
-  margin: 10px 8px 8px 8px; 
+  /* MARGIN ON ALL SIDES */
+  margin: 5px 8px 8px 8px; 
   
   padding: 10px 5px;
   border-radius: 4px;
@@ -733,34 +734,36 @@ html {
   letter-spacing: 1px;
   text-align: center;
   transition: background-color 0.3s ease;
-  margin-top: auto; /* Keeps button at the bottom of the card */
 }
 
 .pdf-btn-primary:hover {
-  background-color: #5f6e5a; /* Darker green on hover */
+  background-color: #5f6e5a;
 }
 
-/* --- Responsive Layout Rules --- */
+/* --- Responsive Rules --- */
 
 /* Tablets (3 per row) */
 @media (max-width: 992px) {
   .pdf-container {
-    flex: 0 0 calc(33.33% - 14px);
+    flex: 0 0 calc(33.33% - 17px);
   }
 }
 
 /* Mobile Phones (2 per row) */
 @media (max-width: 768px) {
   .pdf-grid-container {
-    gap: 10px;
+    gap: 15px;
   }
   .pdf-container {
-    flex: 0 0 calc(50% - 5px);
+    flex: 0 0 calc(50% - 8px);
     margin-bottom: 15px;
   }
   .pdf-btn-primary {
     font-size: 10px;
     padding: 8px 2px;
-    margin: 8px 4px 4px 4px; /* Slightly smaller margins on mobile */
+    margin: 5px 4px 4px 4px;
+  }
+  .pdf-img {
+    margin-bottom: 10px; /* Smaller gap for smaller screens */
   }
 }
