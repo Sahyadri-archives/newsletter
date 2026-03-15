@@ -12,6 +12,7 @@ main .col-lg-10 {
 }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
     font-family: 'Poiret One', system-ui, sans-serif !important;
+    font-weight: bold !important;
 }
 
 /* Target only the container inside the header */
