@@ -1,0 +1,18 @@
+<div class="pdf-container">
+    <div class="pdf-wrapper">
+        <iframe 
+            src="{{ include.file | relative_url }}" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="pdf-footer">
+        <div class="pdf-caption">
+            {{ include.caption | default: "Document Preview" }}
+        </div>
+        
+        <a href="{{ include.file | relative_url }}" download class="pdf-download-btn">
+           Download PDF
+        </a>
+    </div>
+</div>
