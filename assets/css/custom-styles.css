@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 .dropdown-item {
-    white-space: nowrap !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    width: max-content !important;
 }
 
 /* 1. Reset the Bootstrap columns to be full-width of their parent */
