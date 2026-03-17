@@ -22,6 +22,10 @@ main .col-lg-10 {
     font-weight: bold !important;
 }
 
+.post-entry {
+    font-family: 'Amatic SC', cursive !important;
+}
+
 .page-heading {
     margin-top: 5vh !important;    
 }
