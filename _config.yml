@@ -300,8 +300,6 @@ exclude:
   - screenshot.png
   - docs/
   - vendor/
-  - Gemfile
-  - Gemfile.lock
   - node_modules/
   - .github/
 
