@@ -4,7 +4,7 @@ title: Newsletter
 permalink: /posts/
 ---
 
-<div id="top" style="scroll-margin-top: 200px;"></div>
+<div id="top" style="scroll-margin-top: 150px;"></div>
 
 <div class="newsletter-container">
   
@@ -30,7 +30,13 @@ permalink: /posts/
           {{ group.name | default: "General Updates" }}
         </h2>
 
-        {% for post in group.items %}
+        {% comment %} 
+          This is the key change: we sort the items in this category group 
+          by the "weight" property defined in your post's Front Matter.
+        {% endcomment %}
+        {% assign sorted_posts = group.items | sort: "weight" %}
+
+        {% for post in sorted_posts %}
           <article class="post-preview">
             <a href="{{ post.url | relative_url }}" style="text-decoration: none;">
               <h3 class="post-title">{{ post.title }}</h3>
@@ -49,7 +55,8 @@ permalink: /posts/
               {% if post.image %}
                 <div class="post-image">
                   <a href="{{ post.url | relative_url }}">
-                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                    {% comment %} Added leading slash to help with the 404 issues {% endcomment %}
+                    <img src="{{ post.image | prepend: '/' | relative_url }}" alt="{{ post.title }}">
                   </a>
                 </div>
               {% endif %}
@@ -63,7 +70,7 @@ permalink: /posts/
         {% endfor %}
         
         <div class="back-to-top">
-           <a href="#top">↑ Back to top</a>
+            <a href="#top">↑ Back to top</a>
         </div>
       </section>
     {% else %}
