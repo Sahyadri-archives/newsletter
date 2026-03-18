@@ -13,9 +13,11 @@ permalink: /activities/
       <h2 class="toc-title">Activities</h2>
       <ul class="toc-list">
         {% comment %} 
-          1. Group and sort the groups by the date of the newest post in each group
+          1. Filter out items without dates to prevent the 'nil' crash 
+          2. Group by category
         {% endcomment %}
-        {% assign grouped_posts = site.activities | group_by: "category" | sort: "items[0].date" | reverse %}
+        {% assign valid_activities = site.activities | where_exp: "item", "item.date != nil" %}
+        {% assign grouped_posts = valid_activities | group_by: "category" | sort: "name" %}
         
         {% for group in grouped_posts %}
           {% assign category_id = group.name | slugify | default: "general-updates" %}
@@ -37,7 +39,7 @@ permalink: /activities/
         </h2>
 
         {% comment %} 
-          2. Ensure posts inside each category are also newest-to-oldest
+          2. Ensure posts inside each category are sorted newest-to-oldest
         {% endcomment %}
         {% assign sorted_posts = group.items | sort: "date" | reverse %}
         
