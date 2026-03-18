@@ -12,7 +12,11 @@ permalink: /activities/
     <nav class="toc-card">
       <h2 class="toc-title">Activities</h2>
       <ul class="toc-list">
-        {% assign grouped_posts = site.activities | group_by: "category" %}
+        {% comment %} 
+          1. Group and sort the groups by the date of the newest post in each group
+        {% endcomment %}
+        {% assign grouped_posts = site.activities | group_by: "category" | sort: "items[0].date" | reverse %}
+        
         {% for group in grouped_posts %}
           {% assign category_id = group.name | slugify | default: "general-updates" %}
           <li>
@@ -32,7 +36,11 @@ permalink: /activities/
           {{ group.name | default: "General Updates" }}
         </h2>
 
-        {% assign sorted_posts = group.items | reverse %}
+        {% comment %} 
+          2. Ensure posts inside each category are also newest-to-oldest
+        {% endcomment %}
+        {% assign sorted_posts = group.items | sort: "date" | reverse %}
+        
         {% for post in sorted_posts %}
           <article class="post-preview">
             <a href="{{ post.url | relative_url }}" style="text-decoration: none;">
