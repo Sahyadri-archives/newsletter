@@ -26,10 +26,6 @@ main .col-lg-10 {
     font-family: 'Montserrat', sans serif !important;
 }
 
-.page-heading {
-    margin-top: 5vh !important;    
-}
-
 /* Target only the container inside the header */
 .intro-header .container-md, 
 .intro-header .container-lg, 
