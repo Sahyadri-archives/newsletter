@@ -299,6 +299,11 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - .github/
 
 plugins:
   - jekyll-paginate
