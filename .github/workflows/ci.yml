@@ -15,11 +15,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # This tells GitHub to only grab the latest version of your files, 
+          # ignoring the heavy history of old photos/videos.
+          fetch-depth: 1
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
+          # Keeps your site building fast by reusing previous plugin installs
           bundler-cache: true
 
       - name: Setup Pages
