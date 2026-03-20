@@ -676,52 +676,39 @@ html {
 }
 
 
-/* --- PDF Grid Container --- */
-.pdf-grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px; /* Gap between cards */
-  justify-content: flex-start;
-  padding: 20px 0;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+ .pdf-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px 0;
+  }
 
-/* --- Individual PDF Item Container --- */
-.pdf-container {
-  flex: 0 0 calc(25% - 19px); /* 4 per row */
-  box-sizing: border-box;
-  margin-bottom: 30px;
-}
+  .ninad-card {
+    width: 200px; /* Fixed width for uniformity */
+    text-align: center;
+    transition: transform 0.2s;
+  }
 
-/* --- The Card Styling --- */
-.pdf-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 12px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensures button stays at bottom */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .ninad-card:hover {
+    transform: translateY(-5px);
+  }
 
-.pdf-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
+  /* Ensures the thumbnail inside the include fits the container */
+  .ninad-card img {
+    width: 100%;
+    height: 280px; /* Fixed height for consistent alignment */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
 
-/* --- Image / Thumbnail Styling --- */
-.pdf-img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4; 
-  object-fit: cover;
-  border-radius: 2px;
-  display: block;
-  margin-bottom: 15px; /* THIS CREATES THE GAP BELOW IMAGE */
-}
+  .ninad-caption {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+  }
 
 /* --- The Download Button --- */
 .pdf-btn-primary {
