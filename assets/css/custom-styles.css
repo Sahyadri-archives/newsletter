@@ -401,11 +401,13 @@ main.container-md,
 
 /* --- 3. TABLE OF CONTENTS (STYLING) --- */
 .toc-card {
-    background-color: transparent !important; /* Your requested color */
+    /* ADD THE SAGE COLOR HERE */
+    background-color: #BDCDC0 !important; 
     padding: 25px;
-    border-radius: 8px;
+    border-radius: 12px;
     border: none;
-    box-shadow: none;
+    /* ADD THE SHADOW HERE */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important; 
 }
 
 .toc-title {
@@ -864,13 +866,13 @@ main.container-md,
 /* --- 4. NEWSLETTER-STYLE SIDEBAR (TOC) --- */
 .toc-sidebar {
     flex: 0 0 280px;
-    position: -webkit-sticky;
     position: sticky;
-    top: 100px; /* Adjust based on navbar height */
-    background-color: #BDCDC0 !important; /* Your specific Sage color */
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    top: 100px;
+    /* CHANGE THIS LINE TO TRANSPARENT */
+    background-color: transparent !important; 
+    padding: 0; 
+    /* REMOVE THE SHADOW FROM HERE */
+    box-shadow: none !important; 
 }
 
 .toc-card h2.toc-title {
