@@ -892,7 +892,6 @@ main.container-md,
 }
 
 .toc-list li {
-    padding: 12px 0;
     font-family: 'Amatic SC', cursive !important;
     font-size: 1.8rem !important;
     cursor: pointer;
