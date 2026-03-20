@@ -8,9 +8,21 @@ subtitle: Click on thumbnail to open the album
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="custom-styles.css">
     <style>
-        /* This line forces the jump to be instant, overriding any external CSS */
-        html {
+        /* 1. Force instant jumping (No smooth sliding) */
+        html, body {
             scroll-behavior: auto !important;
+        }
+
+        /* 2. Ensure all items are visible */
+        .album-item {
+            display: block !important; 
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* 3. Optional: Add spacing for anchor jumps so they don't hit the very top edge */
+        .album-item {
+            scroll-margin-top: 20px;
         }
     </style>
 </head>
@@ -311,35 +323,5 @@ subtitle: Click on thumbnail to open the album
         <button id="load-more-btn" class="btn-load-more">Load More</button>
     </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const itemsPerPage = 10;
-        const btn = document.getElementById('load-more-btn');
-        const allItems = Array.from(document.querySelectorAll('.album-item'));
-        const totalItems = allItems.length;
-
-        if (totalItems <= itemsPerPage) {
-            if (btn) btn.parentElement.style.display = 'none';
-        } else {
-            for (let i = itemsPerPage; i < totalItems; i++) {
-                allItems[i].classList.add('hidden-item');
-            }
-        }
-
-        if (btn) {
-            btn.addEventListener('click', function() {
-                const hiddenItems = Array.from(document.querySelectorAll('.album-item.hidden-item'));
-                const batchToReveal = hiddenItems.slice(0, itemsPerPage);
-                batchToReveal.forEach(item => {
-                    item.classList.remove('hidden-item');
-                });
-                const remainingHidden = document.querySelectorAll('.album-item.hidden-item').length;
-                if (remainingHidden === 0) {
-                    btn.parentElement.style.display = 'none';
-                }
-            });
-        }
-    });
-    </script>
 </body>
 </body>
