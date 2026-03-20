@@ -322,6 +322,64 @@ subtitle: Click on thumbnail to open the album
     <div style="text-align: center; margin: 20px 0;">
         <button id="load-more-btn" class="btn-load-more">Load More</button>
     </div>
+ <script>
 
-</body>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        const itemsPerPage = 10;
+
+        const btn = document.getElementById('load-more-btn');
+
+        const allItems = Array.from(document.querySelectorAll('.album-item'));
+
+        const totalItems = allItems.length;
+
+
+
+        if (totalItems <= itemsPerPage) {
+
+            if (btn) btn.parentElement.style.display = 'none';
+
+        } else {
+
+            for (let i = itemsPerPage; i < totalItems; i++) {
+
+                allItems[i].classList.add('hidden-item');
+
+            }
+
+        }
+
+
+
+        if (btn) {
+
+            btn.addEventListener('click', function() {
+
+                const hiddenItems = Array.from(document.querySelectorAll('.album-item.hidden-item'));
+
+                const batchToReveal = hiddenItems.slice(0, itemsPerPage);
+
+                batchToReveal.forEach(item => {
+
+                    item.classList.remove('hidden-item');
+
+                });
+
+                const remainingHidden = document.querySelectorAll('.album-item.hidden-item').length;
+
+                if (remainingHidden === 0) {
+
+                    btn.parentElement.style.display = 'none';
+
+                }
+
+            });
+
+        }
+
+    });
+
+    </script>
+
 </body>
