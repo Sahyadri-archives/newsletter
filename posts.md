@@ -29,8 +29,14 @@ permalink: /posts/
           {{ group.name | default: "General Updates" }}
         </h2>
 
-        {% comment %} Sorts posts so those with higher priority (or 'pinned: true') appear first {% endcomment %}
-        {% assign sorted_posts = group.items | sort: "pinned" | reverse %}
+        {% comment %} 
+          1. Filter out the pinned posts
+          2. Filter out the unpinned posts (remaining ones)
+          3. Concatenate them so Pinned is always first, followed by others in their original date order
+        {% endcomment %}
+        {% assign pinned_posts = group.items | where: "pinned", true %}
+        {% assign normal_posts = group.items | where_exp: "item", "item.pinned != true" %}
+        {% assign sorted_posts = pinned_posts | concat: normal_posts %}
 
         {% for post in sorted_posts %}
           <article class="post-preview">
