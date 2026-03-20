@@ -405,7 +405,7 @@ main.container-md,
     padding: 25px;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: none;
 }
 
 .toc-title {
