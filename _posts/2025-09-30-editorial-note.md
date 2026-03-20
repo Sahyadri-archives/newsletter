@@ -5,6 +5,7 @@ date: 2025-09-30
 subtitle: "By Reya Shah (Grade 11)"
 category: September 2025
 image: "/assets/img/Newsletter/septembereditorialnote.png"
+pinned: true
 ---
 
 Welcome to the 14th issue of the ‘Tiwai Tales’! This past month has been bustling for occasions and events, the highlight being the celebration of our school’s 30th anniversary and Teacher’s Day. 
