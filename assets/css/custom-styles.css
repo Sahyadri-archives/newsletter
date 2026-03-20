@@ -898,10 +898,9 @@ main.container-md,
     cursor: pointer;
     color: #404040;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(64, 64, 64, 0.1);
 }
 
-.toc-list li:last-child { border-bottom: none; }
+
 
 .toc-list li:hover, 
 .toc-list li.active {
