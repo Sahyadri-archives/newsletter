@@ -3,43 +3,6 @@ layout: page
 title: Ninad
 subtitle: Click on thumbnail to open the album
 ---
-
-<style>
-  .pdf-grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    padding: 20px 0;
-  }
-
-  .ninad-card {
-    width: 200px; /* Fixed width for uniformity */
-    text-align: center;
-    transition: transform 0.2s;
-  }
-
-  .ninad-card:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Ensures the thumbnail inside the include fits the container */
-  .ninad-card img {
-    width: 100%;
-    height: 280px; /* Fixed height for consistent alignment */
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .ninad-caption {
-    margin-top: 12px;
-    font-weight: 600;
-    color: #333;
-    font-size: 1.1rem;
-  }
-</style>
-
 <div class="pdf-grid-container">
 
   <figure class="ninad-card">
