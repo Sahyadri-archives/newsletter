@@ -7,104 +7,80 @@ subtitle: Click on thumbnail to open the album
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Force instant jumps and override external smooth scrolling */
-        html {
-            scroll-behavior: auto !important;
-        }
+        <style>
+    /* ... (keep your existing sidebar and container styles) ... */
 
-        /* Container for Sidebar + Grid Layout */
-        .photos-page-container {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            margin-top: 30px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    /* Fluid Photo Grid Area */
+    .photos-content {
+        flex: 1;
+        width: 100%;
+    }
 
-        /* Newsletter-style Sidebar (TOC) */
-        .toc-sidebar {
-            flex: 0 0 280px;
-            position: sticky;
-            top: 100px; /* Adjust based on your navbar height */
-            background-color: #c5d1c0; /* Sage green from your screenshots */
-            padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+    .album-grid {
+        display: grid;
+        /* auto-fit makes the grid expand to fill the space */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+    }
 
-        .toc-card h2.toc-title {
-            font-family: 'Amatic SC', cursive !important;
-            font-size: 2.8rem !important;
-            margin: 0 0 15px 0;
-            border-bottom: 2px solid #404040;
-            padding-bottom: 10px;
-            color: #404040;
-            text-transform: uppercase;
-        }
+    .album-item {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
 
-        .toc-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    .album-item:hover {
+        transform: translateY(-5px);
+    }
 
-        .toc-list li {
-            padding: 12px 0;
-            font-family: 'Amatic SC', cursive !important;
-            font-size: 1.8rem !important;
-            cursor: pointer;
-            color: #404040;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(64, 64, 64, 0.1);
-        }
+    .album-item a {
+        display: block;
+        width: 100%;
+        /* Force a consistent 16:9 or 3:2 aspect ratio */
+        aspect-ratio: 3 / 2; 
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-        .toc-list li:last-child {
-            border-bottom: none;
-        }
+    .album-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This is the "magic" that makes it fluid and uniform */
+        display: block;
+    }
 
-        .toc-list li:hover, .toc-list li.active {
-            color: #6d8571;
-            padding-left: 10px;
-            font-weight: bold;
-        }
+    .album-item figcaption {
+        margin-top: 12px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.4rem;
+        text-align: center;
+        color: #404040;
+        line-height: 1.2;
+    }
 
-        /* Photo Grid Area */
-        .photos-content {
-            flex: 1;
-        }
+    .album-item.hidden-item {
+        display: none !important;
+    }
 
-        .album-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    /* Make the button look like the rest of the site */
+    .btn-load-more {
+        background: #6d8571;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 25px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
 
-        .album-item.hidden-item {
-            display: none !important;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 992px) {
-            .photos-page-container {
-                flex-direction: column;
-            }
-            .toc-sidebar {
-                position: relative;
-                top: 0;
-                width: 100%;
-                flex: none;
-                margin-bottom: 30px;
-            }
-        }
-
-        .load-more-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-    </style>
+    .btn-load-more:hover {
+        background: #5a6e5d;
+    }
+</style>
 </head>
 
 <body>
