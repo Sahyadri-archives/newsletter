@@ -3,11 +3,16 @@ layout: page
 title: Photos
 subtitle: Click on thumbnail to open the album
 ---
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="custom-styles.css">
+    <style>
+        /* This line forces the jump to be instant, overriding any external CSS */
+        html {
+            scroll-behavior: auto !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -307,44 +312,34 @@ subtitle: Click on thumbnail to open the album
     </div>
 
   <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Configuration
-    const itemsPerPage = 10;
-    const btn = document.getElementById('load-more-btn');
-    // Note: Ensure your HTML items use the class 'album-item' 
-    const allItems = Array.from(document.querySelectorAll('.album-item'));
-    const totalItems = allItems.length;
+    document.addEventListener("DOMContentLoaded", function() {
+        const itemsPerPage = 10;
+        const btn = document.getElementById('load-more-btn');
+        const allItems = Array.from(document.querySelectorAll('.album-item'));
+        const totalItems = allItems.length;
 
-    // 2. Initial State: Show only the first 10 items
-    if (totalItems <= itemsPerPage) {
-        if (btn) btn.parentElement.style.display = 'none';
-    } else {
-        // Hide every item starting from the 11th one (index 10) to the end of the list
-        for (let i = itemsPerPage; i < totalItems; i++) {
-            allItems[i].classList.add('hidden-item');
-        }
-    }
-
-    // 3. Click Event: Reveal the next batch of 10
-    if (btn) {
-        btn.addEventListener('click', function() {
-            // Find all items that are currently hidden
-            const hiddenItems = Array.from(document.querySelectorAll('.album-item.hidden-item'));
-            
-            // Select the next 10 hidden items from the top of the hidden stack
-            const batchToReveal = hiddenItems.slice(0, itemsPerPage);
-            
-            batchToReveal.forEach(item => {
-                item.classList.remove('hidden-item');
-            });
-
-            // 4. Clean up: Hide the "Load More" button if no items remain hidden
-            const remainingHidden = document.querySelectorAll('.album-item.hidden-item').length;
-            if (remainingHidden === 0) {
-                btn.parentElement.style.display = 'none';
+        if (totalItems <= itemsPerPage) {
+            if (btn) btn.parentElement.style.display = 'none';
+        } else {
+            for (let i = itemsPerPage; i < totalItems; i++) {
+                allItems[i].classList.add('hidden-item');
             }
-        });
-    }
-});
-</script>
+        }
+
+        if (btn) {
+            btn.addEventListener('click', function() {
+                const hiddenItems = Array.from(document.querySelectorAll('.album-item.hidden-item'));
+                const batchToReveal = hiddenItems.slice(0, itemsPerPage);
+                batchToReveal.forEach(item => {
+                    item.classList.remove('hidden-item');
+                });
+                const remainingHidden = document.querySelectorAll('.album-item.hidden-item').length;
+                if (remainingHidden === 0) {
+                    btn.parentElement.style.display = 'none';
+                }
+            });
+        }
+    });
+    </script>
+</body>
 </body>
