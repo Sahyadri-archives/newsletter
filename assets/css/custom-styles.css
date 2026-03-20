@@ -751,3 +751,67 @@ html {
     margin-bottom: 10px; /* Smaller gap for smaller screens */
   }
 }
+
+/* --- Academic Year TOC (Albums) --- */
+.academic-toc {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.year-album-card {
+    width: 180px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.year-album-card:hover {
+    transform: translateY(-5px);
+}
+
+.year-album-card .thumb-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #f7faf8; /* Slight greenish white */
+    border: 2px solid #6d8571;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.year-album-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.year-album-card.active img {
+    opacity: 1;
+}
+
+.year-album-card.active .thumb-wrapper {
+    outline: 3px solid #6d8571;
+    box-shadow: 0 4px 15px rgba(109, 133, 113, 0.4);
+}
+
+.year-album-card p {
+    margin-top: 10px;
+    font-family: 'Amatic SC', cursive !important;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    color: #404040;
+}
+
+/* Hidden state for filtered items */
+.album-item.hidden-item {
+    display: none !important;
+}
