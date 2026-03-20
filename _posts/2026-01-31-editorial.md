@@ -4,6 +4,7 @@ title: "Editorial Note"
 date: 2026-01-31
 subtitle: "By Riddhim Inamke (Grade 11)"
 category: January 2026
+pinned: true
 ---
 
 It is the beginning of a new year again, and with it comes the sense that something is starting over, even if we are only continuing from where we left off. This time, that feeling also comes with the launch of the new version of Sahyadri Connect.
