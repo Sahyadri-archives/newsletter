@@ -195,7 +195,7 @@ body, p, div {
 .btn-load-more {
   /* Centering & Display */
   display: inline-block;
-  margin: 20px auto; /* Adds vertical breathing room and helps with centering */
+
   
   /* Colors - pulled from your site's sage palette */
   background-color: #5d6d5a; 
